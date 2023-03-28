@@ -16,9 +16,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("123")
-
     }
 
     override func loadView() {
@@ -32,6 +29,6 @@ class ViewController: UIViewController {
         descriptionLabel.font = FontFamily.SFProText.regular.font(size: 18)
         descriptionLabel.textColor = .white
 
-        getStarteButton.title = "cos"
+        getStarteButton.title = "Get started"
     }
 }
