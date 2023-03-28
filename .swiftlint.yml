@@ -1,0 +1,15 @@
+included:
+  - Foodzilla
+  
+excluded:
+  - Pods
+  - Carthage
+
+disabled_rules:
+  - type_body_length
+  - line_length
+  - function_body_length
+  - file_length
+  - identifier_name
+  - cyclomatic_complexity
+

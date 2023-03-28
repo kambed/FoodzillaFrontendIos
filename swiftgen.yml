@@ -1,0 +1,18 @@
+xcassets:
+  - inputs: Foodzilla/assets/Assets.xcassets
+    outputs:
+      - templateName: swift4
+        output: Foodzilla/assets/generated/Images.swift
+        params:
+          enumName: Assets
+  - inputs: Foodzilla/assets/Colors.xcassets
+    outputs:
+      - templateName: swift4
+        output: Foodzilla/assets/generated/Colors.swift
+        params:
+          enumName: Colors
+fonts:
+  inputs: Foodzilla/assets/fonts
+  outputs:
+    templateName: swift4
+    output: Foodzilla/assets/generated/Fonts.swift
