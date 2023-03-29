@@ -39,11 +39,11 @@
 		6AFDB21329D3717E00AC60EF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21029D3717E00AC60EF /* Images.swift */; };
 		6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21129D3717E00AC60EF /* Colors.swift */; };
 		6AFDB21529D3717E00AC60EF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21229D3717E00AC60EF /* Fonts.swift */; };
-		8304551F8EE1DC73C61F3D02 /* Pods_Foodzilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1110E6EAD73E4B15038814F9 /* Pods_Foodzilla.framework */; };
+		FBC44A82EA39A117B9DB62AD /* Pods_Foodzilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1110E6EAD73E4B15038814F9 /* Pods_Foodzilla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodzilla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		588838FCFDD8350CCBCB4589 /* Pods-Foodzilla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodzilla.release.xcconfig"; path = "Target Support Files/Pods-Foodzilla/Pods-Foodzilla.release.xcconfig"; sourceTree = "<group>"; };
 		6AADB8C629D37A8200A5FC44 /* LandingButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingButton.xib; sourceTree = "<group>"; };
 		6AADB8C829D37AE800A5FC44 /* LandingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingButton.swift; sourceTree = "<group>"; };
 		6AADB8CD29D37CC000A5FC44 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 		6AFDB21029D3717E00AC60EF /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		6AFDB21129D3717E00AC60EF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6AFDB21229D3717E00AC60EF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		9B5EF2A600937BDB401659DB /* Pods-Foodzilla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodzilla.release.xcconfig"; path = "Target Support Files/Pods-Foodzilla/Pods-Foodzilla.release.xcconfig"; sourceTree = "<group>"; };
-		D3BB55A45D091FC4EF937645 /* Pods-Foodzilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodzilla.debug.xcconfig"; path = "Target Support Files/Pods-Foodzilla/Pods-Foodzilla.debug.xcconfig"; sourceTree = "<group>"; };
+		DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodzilla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D69E665A795BB53ABF6384 /* Pods-Foodzilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodzilla.debug.xcconfig"; path = "Target Support Files/Pods-Foodzilla/Pods-Foodzilla.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8304551F8EE1DC73C61F3D02 /* Pods_Foodzilla.framework in Frameworks */,
+				FBC44A82EA39A117B9DB62AD /* Pods_Foodzilla.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,10 +97,18 @@
 		03BBDABEA3E923058E4D42E0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D3BB55A45D091FC4EF937645 /* Pods-Foodzilla.debug.xcconfig */,
-				9B5EF2A600937BDB401659DB /* Pods-Foodzilla.release.xcconfig */,
+				E5D69E665A795BB53ABF6384 /* Pods-Foodzilla.debug.xcconfig */,
+				588838FCFDD8350CCBCB4589 /* Pods-Foodzilla.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		106D81C65B5476E8F3FC7907 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6AADB8C229D3793000A5FC44 /* components */ = {
@@ -150,7 +158,7 @@
 				6AD049EE29C232D500B60848 /* Foodzilla */,
 				6AD049ED29C232D500B60848 /* Products */,
 				03BBDABEA3E923058E4D42E0 /* Pods */,
-				7C8D9413170A80656D709989 /* Frameworks */,
+				106D81C65B5476E8F3FC7907 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,14 +265,6 @@
 			path = generated;
 			sourceTree = "<group>";
 		};
-		7C8D9413170A80656D709989 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1110E6EAD73E4B15038814F9 /* Pods_Foodzilla.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,12 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AD04A0029C232D600B60848 /* Build configuration list for PBXNativeTarget "Foodzilla" */;
 			buildPhases = (
-				17574A71EF88E71C11F0DC64 /* [CP] Check Pods Manifest.lock */,
+				8C57C32BD42B2C76B3E4A51F /* [CP] Check Pods Manifest.lock */,
 				6AD049E829C232D500B60848 /* Sources */,
 				6AD049E929C232D500B60848 /* Frameworks */,
 				6AD049EA29C232D500B60848 /* Resources */,
-				8A4B16EBB7A3496DBB48096A /* [CP] Embed Pods Frameworks */,
 				6ABB1D7029D3689400430C1E /* ShellScript */,
+				A6A4FCD6892B08E114F61BCF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,7 +356,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17574A71EF88E71C11F0DC64 /* [CP] Check Pods Manifest.lock */ = {
+		6ABB1D7029D3689400430C1E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nif \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    \"${PODS_ROOT}/SwiftLint/swiftlint\" lint --fix –config \"..${PODS_ROOT}/.swiftlint.yml\"\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+		8C57C32BD42B2C76B3E4A51F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,24 +395,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6ABB1D7029D3689400430C1E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\nif \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    \"${PODS_ROOT}/SwiftLint/swiftlint\" lint --fix –config \"..${PODS_ROOT}/.swiftlint.yml\"\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
-		};
-		8A4B16EBB7A3496DBB48096A /* [CP] Embed Pods Frameworks */ = {
+		A6A4FCD6892B08E114F61BCF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -570,7 +570,7 @@
 		};
 		6AD04A0129C232D600B60848 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3BB55A45D091FC4EF937645 /* Pods-Foodzilla.debug.xcconfig */;
+			baseConfigurationReference = E5D69E665A795BB53ABF6384 /* Pods-Foodzilla.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -599,7 +599,7 @@
 		};
 		6AD04A0229C232D600B60848 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B5EF2A600937BDB401659DB /* Pods-Foodzilla.release.xcconfig */;
+			baseConfigurationReference = 588838FCFDD8350CCBCB4589 /* Pods-Foodzilla.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
