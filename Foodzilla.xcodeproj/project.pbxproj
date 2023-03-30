@@ -39,6 +39,8 @@
 		6AFDB21329D3717E00AC60EF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21029D3717E00AC60EF /* Images.swift */; };
 		6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21129D3717E00AC60EF /* Colors.swift */; };
 		6AFDB21529D3717E00AC60EF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21229D3717E00AC60EF /* Fonts.swift */; };
+		81EC69E229D5E85D0004D71D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EC69E129D5E85D0004D71D /* Register.storyboard */; };
+		81EC69E429D5E8710004D71D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EC69E329D5E8710004D71D /* RegisterViewController.swift */; };
 		FBC44A82EA39A117B9DB62AD /* Pods_Foodzilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		6AFDB21029D3717E00AC60EF /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		6AFDB21129D3717E00AC60EF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6AFDB21229D3717E00AC60EF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		81EC69E129D5E85D0004D71D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		81EC69E329D5E8710004D71D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodzilla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D69E665A795BB53ABF6384 /* Pods-Foodzilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodzilla.debug.xcconfig"; path = "Target Support Files/Pods-Foodzilla/Pods-Foodzilla.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,13 +140,6 @@
 			path = LandingButton;
 			sourceTree = "<group>";
 		};
-		6AADB8CB29D37C9400A5FC44 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
 		6AADB8CC29D37CA600A5FC44 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,8 +188,8 @@
 		6AFDB1E129D36A9000AC60EF /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				81EC69E029D5E8460004D71D /* Register */,
 				6AADB8CC29D37CA600A5FC44 /* Login */,
-				6AADB8CB29D37C9400A5FC44 /* Register */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -265,6 +262,15 @@
 			path = generated;
 			sourceTree = "<group>";
 		};
+		81EC69E029D5E8460004D71D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				81EC69E129D5E85D0004D71D /* Register.storyboard */,
+				81EC69E329D5E8710004D71D /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +336,7 @@
 				6AD049FC29C232D600B60848 /* LaunchScreen.storyboard in Resources */,
 				6AFDB1FF29D370A500AC60EF /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				6AFDB20029D370A500AC60EF /* SF-Pro-Text-Light.otf in Resources */,
+				81EC69E229D5E85D0004D71D /* Register.storyboard in Resources */,
 				6AFDB20929D370A500AC60EF /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				6AFDB20D29D370A500AC60EF /* SF-Pro-Text-Medium.otf in Resources */,
 				6AFDB20729D370A500AC60EF /* SF-Pro-Text-ThinItalic.otf in Resources */,
@@ -419,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81EC69E429D5E8710004D71D /* RegisterViewController.swift in Sources */,
 				6AD049F429C232D500B60848 /* ViewController.swift in Sources */,
 				6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */,
 				6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */,
