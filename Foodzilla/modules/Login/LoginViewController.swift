@@ -9,11 +9,13 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
+    @IBOutlet weak var SignInButton: LandingButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-//    override func loadView() {
-//        SignInButton.title = "SIGN IN"
-//    }
+    override func loadView() {
+        super.loadView()
+        SignInButton.title = "SIGN IN"
+    }
 }
