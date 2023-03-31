@@ -12,4 +12,8 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+//    override func loadView() {
+//        SignInButton.title = "SIGN IN"
+//    }
 }
