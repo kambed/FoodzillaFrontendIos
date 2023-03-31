@@ -25,6 +25,7 @@
                                 <rect key="frame" x="15" y="206" width="360" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="0E7-Rr-246"/>
+                                    <constraint firstAttribute="height" constant="34" id="xPR-OV-DoR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -33,6 +34,7 @@
                                 <rect key="frame" x="15" y="279" width="360" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="TmD-Xg-0GM"/>
+                                    <constraint firstAttribute="height" constant="34" id="tYh-oX-d3o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
