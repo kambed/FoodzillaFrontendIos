@@ -21,7 +21,6 @@ class LandingButton: UIButton {
         super.awakeFromNib()
 
         var configuration: UIButton.Configuration = .filled()
-        configuration.image = UIImage(systemName: "paperplane.fill")
         configuration.imagePadding = 10
         self.configuration = configuration
     }

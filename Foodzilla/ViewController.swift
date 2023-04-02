@@ -30,5 +30,6 @@ class ViewController: UIViewController {
         descriptionLabel.textColor = .white
 
         getStarteButton.title = "Get started"
+        getStarteButton.configuration?.image = UIImage(systemName: "paperplane.fill")
     }
 }
