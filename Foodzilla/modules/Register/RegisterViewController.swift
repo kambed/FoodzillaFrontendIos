@@ -9,13 +9,13 @@ import UIKit
 
 final class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var RegisterButton: LandingButton!
+    @IBOutlet weak var registerButton: LandingButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func loadView() {
         super.loadView()
-        RegisterButton.title = "REGISTER"
+        registerButton.title = "REGISTER"
     }
 }
