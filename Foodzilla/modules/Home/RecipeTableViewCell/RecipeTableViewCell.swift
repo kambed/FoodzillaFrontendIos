@@ -25,6 +25,7 @@ class RecipeTableViewCell: UICollectionViewCell {
     }
 
     private func setUpLabels() {
-
+        titleLabel.font = FontFamily.SFProText.medium.font(size: 15)
+        timeLabel.font = FontFamily.SFProText.medium.font(size: 13)
     }
 }
