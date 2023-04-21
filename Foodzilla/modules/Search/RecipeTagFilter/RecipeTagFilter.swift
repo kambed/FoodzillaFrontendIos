@@ -19,7 +19,7 @@ class RecipeTagFilter: UICollectionViewCell {
     }
 
     private func setUpButtons() {
-        DeleteButton.configuration?.image = UIImage(systemName: "minus")
+        DeleteButton.configuration?.image = UIImage(systemName: "minus.circle.fill")
         TagName.title = "Test"
     }
 }
