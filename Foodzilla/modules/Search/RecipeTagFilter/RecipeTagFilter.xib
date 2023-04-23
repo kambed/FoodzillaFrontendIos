@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeTagFilter" id="kYi-WG-R6e" customClass="RecipeTagFilter" customModule="Foodzilla" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nLn-Y0-sgU">
+                <rect key="frame" x="0.0" y="0.0" width="313" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khO-oX-r2O">
+                        <rect key="frame" x="0.0" y="0.0" width="244" height="34.333333333333336"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqp-y5-7kM" customClass="LandingButton" customModule="Foodzilla" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="34.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="aHs-su-zTU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efM-Yw-xwQ" customClass="DarkButton" customModule="Foodzilla" customModuleProvider="target">
+                                <rect key="frame" x="216" y="8" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Suf-J0-FLv"/>
+                                    <constraint firstAttribute="width" constant="28" id="Tz1-7C-Es7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kqp-y5-7kM" firstAttribute="leading" secondItem="khO-oX-r2O" secondAttribute="leading" id="LXa-nH-i7R"/>
+                            <constraint firstAttribute="bottom" secondItem="efM-Yw-xwQ" secondAttribute="bottom" constant="8" id="S8e-k0-WiH"/>
+                            <constraint firstItem="efM-Yw-xwQ" firstAttribute="top" secondItem="khO-oX-r2O" secondAttribute="top" constant="8" id="beg-X5-C5F"/>
+                            <constraint firstItem="efM-Yw-xwQ" firstAttribute="leading" secondItem="Kqp-y5-7kM" secondAttribute="trailing" constant="16" id="fmn-bv-jeJ"/>
+                            <constraint firstItem="Kqp-y5-7kM" firstAttribute="top" secondItem="khO-oX-r2O" secondAttribute="top" id="tKs-rK-yin"/>
+                            <constraint firstAttribute="trailing" secondItem="efM-Yw-xwQ" secondAttribute="trailing" id="tv4-jb-ThH"/>
+                            <constraint firstAttribute="bottom" secondItem="Kqp-y5-7kM" secondAttribute="bottom" id="wRi-Ea-Tc9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="khO-oX-r2O" firstAttribute="leading" secondItem="nLn-Y0-sgU" secondAttribute="leading" id="5Z9-EG-hck"/>
+                    <constraint firstItem="khO-oX-r2O" firstAttribute="top" secondItem="nLn-Y0-sgU" secondAttribute="top" id="OwS-f4-kms"/>
+                    <constraint firstAttribute="trailing" secondItem="khO-oX-r2O" secondAttribute="trailing" id="Usv-9A-QVf"/>
+                    <constraint firstAttribute="bottom" secondItem="khO-oX-r2O" secondAttribute="bottom" id="r3U-fV-xJ3"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="313" height="65"/>
+            <connections>
+                <outlet property="deleteButton" destination="efM-Yw-xwQ" id="D6H-Kx-Ard"/>
+                <outlet property="tagName" destination="Kqp-y5-7kM" id="p1U-Fg-EBf"/>
+            </connections>
+            <point key="canvasLocation" x="-167.17557251908397" y="-119.36619718309859"/>
+        </collectionViewCell>
+    </objects>
+</document>

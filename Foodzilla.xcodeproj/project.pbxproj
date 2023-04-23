@@ -45,6 +45,13 @@
 		6AFDB21329D3717E00AC60EF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21029D3717E00AC60EF /* Images.swift */; };
 		6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21129D3717E00AC60EF /* Colors.swift */; };
 		6AFDB21529D3717E00AC60EF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21229D3717E00AC60EF /* Fonts.swift */; };
+		813E15F529F1DCC900F4C492 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813E15F429F1DCC900F4C492 /* Search.storyboard */; };
+		813E15F729F1DCDD00F4C492 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15F629F1DCDD00F4C492 /* SearchViewController.swift */; };
+		813E15FC29F1DEAB00F4C492 /* DarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15FB29F1DEAB00F4C492 /* DarkButton.swift */; };
+		813E15FE29F1DF0A00F4C492 /* DarkButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813E15FD29F1DF0A00F4C492 /* DarkButton.xib */; };
+		8187AC6929F1E84E00AA0904 /* RecipeTagFilter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */; };
+		8187AC6B29F1E87B00AA0904 /* RecipeTagFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187AC6A29F1E87B00AA0904 /* RecipeTagFilter.swift */; };
+		8187AC6F29F1ED3100AA0904 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187AC6E29F1ED3100AA0904 /* SearchViewModel.swift */; };
 		81A4125729DE04DD0005AC33 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A4125629DE04DD0005AC33 /* Home.storyboard */; };
 		81A4125929DE04EC0005AC33 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4125829DE04EC0005AC33 /* HomeViewController.swift */; };
 		81EC69E229D5E85D0004D71D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EC69E129D5E85D0004D71D /* Register.storyboard */; };
@@ -94,6 +101,13 @@
 		6AFDB21029D3717E00AC60EF /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		6AFDB21129D3717E00AC60EF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6AFDB21229D3717E00AC60EF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		813E15F429F1DCC900F4C492 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		813E15F629F1DCDD00F4C492 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		813E15FB29F1DEAB00F4C492 /* DarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButton.swift; sourceTree = "<group>"; };
+		813E15FD29F1DF0A00F4C492 /* DarkButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DarkButton.xib; sourceTree = "<group>"; };
+		8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTagFilter.xib; sourceTree = "<group>"; };
+		8187AC6A29F1E87B00AA0904 /* RecipeTagFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTagFilter.swift; sourceTree = "<group>"; };
+		8187AC6E29F1ED3100AA0904 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		81A4125629DE04DD0005AC33 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		81A4125829DE04EC0005AC33 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		81EC69E129D5E85D0004D71D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -169,6 +183,7 @@
 		6AADB8C329D3793600A5FC44 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				813E15F829F1DE8700F4C492 /* DarkButton */,
 				6AADB8CA29D37C3600A5FC44 /* LandingButton */,
 			);
 			path = buttons;
@@ -231,6 +246,7 @@
 		6AFDB1E129D36A9000AC60EF /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				813E15F329F1DCB000F4C492 /* Search */,
 				81A4125329DE04990005AC33 /* Home */,
 				81EC69E029D5E8460004D71D /* Register */,
 				6AADB8CC29D37CA600A5FC44 /* Login */,
@@ -305,6 +321,35 @@
 				6AFDB21029D3717E00AC60EF /* Images.swift */,
 			);
 			path = generated;
+			sourceTree = "<group>";
+		};
+		813E15F329F1DCB000F4C492 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8187AC6729F1E7F700AA0904 /* RecipeTagFilter */,
+				813E15F429F1DCC900F4C492 /* Search.storyboard */,
+				813E15F629F1DCDD00F4C492 /* SearchViewController.swift */,
+				8187AC6E29F1ED3100AA0904 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		813E15F829F1DE8700F4C492 /* DarkButton */ = {
+			isa = PBXGroup;
+			children = (
+				813E15FB29F1DEAB00F4C492 /* DarkButton.swift */,
+				813E15FD29F1DF0A00F4C492 /* DarkButton.xib */,
+			);
+			path = DarkButton;
+			sourceTree = "<group>";
+		};
+		8187AC6729F1E7F700AA0904 /* RecipeTagFilter */ = {
+			isa = PBXGroup;
+			children = (
+				8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */,
+				8187AC6A29F1E87B00AA0904 /* RecipeTagFilter.swift */,
+			);
+			path = RecipeTagFilter;
 			sourceTree = "<group>";
 		};
 		81A4125329DE04990005AC33 /* Home */ = {
@@ -390,9 +435,11 @@
 			files = (
 				6A8B165D29E72DBC00DAE5D0 /* MainTextField.xib in Resources */,
 				6AFDB20329D370A500AC60EF /* SF-Pro-Text-Regular.otf in Resources */,
+				8187AC6929F1E84E00AA0904 /* RecipeTagFilter.xib in Resources */,
 				6AD049FC29C232D600B60848 /* LaunchScreen.storyboard in Resources */,
 				6AFDB1FF29D370A500AC60EF /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				6AFDB20029D370A500AC60EF /* SF-Pro-Text-Light.otf in Resources */,
+				813E15FE29F1DF0A00F4C492 /* DarkButton.xib in Resources */,
 				81EC69E229D5E85D0004D71D /* Register.storyboard in Resources */,
 				6AFDB20929D370A500AC60EF /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				6AFDB20D29D370A500AC60EF /* SF-Pro-Text-Medium.otf in Resources */,
@@ -410,6 +457,7 @@
 				6AFDB20429D370A500AC60EF /* SF-Pro-Text-Ultralight.otf in Resources */,
 				6AFDB20129D370A500AC60EF /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				6AD049F929C232D600B60848 /* Assets.xcassets in Resources */,
+				813E15F529F1DCC900F4C492 /* Search.storyboard in Resources */,
 				6AD049F729C232D500B60848 /* Main.storyboard in Resources */,
 				6AFDB20629D370A500AC60EF /* SF-Pro-Text-Thin.otf in Resources */,
 				6AADB8C729D37A8200A5FC44 /* LandingButton.xib in Resources */,
@@ -485,14 +533,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813E15F729F1DCDD00F4C492 /* SearchViewController.swift in Sources */,
 				81EC69E429D5E8710004D71D /* RegisterViewController.swift in Sources */,
 				6AD049F429C232D500B60848 /* ViewController.swift in Sources */,
 				6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */,
 				6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */,
 				6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */,
+				8187AC6F29F1ED3100AA0904 /* SearchViewModel.swift in Sources */,
 				6AFDB21329D3717E00AC60EF /* Images.swift in Sources */,
 				81A4125929DE04EC0005AC33 /* HomeViewController.swift in Sources */,
 				6A8B165729E7273900DAE5D0 /* HomeViewModel.swift in Sources */,
+				8187AC6B29F1E87B00AA0904 /* RecipeTagFilter.swift in Sources */,
+				813E15FC29F1DEAB00F4C492 /* DarkButton.swift in Sources */,
 				6AADB8D029D37CC800A5FC44 /* LoginViewController.swift in Sources */,
 				6AD049F029C232D500B60848 /* AppDelegate.swift in Sources */,
 				6AFDB21529D3717E00AC60EF /* Fonts.swift in Sources */,
