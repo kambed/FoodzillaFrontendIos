@@ -17,11 +17,14 @@ class LandingButton: UIButton {
         }
     }
 
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.configuration = .filled()
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        var configuration: UIButton.Configuration = .filled()
-        configuration.imagePadding = 10
-        self.configuration = configuration
+        self.configuration?.imagePadding = 10
     }
 }

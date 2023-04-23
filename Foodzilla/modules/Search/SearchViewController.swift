@@ -9,10 +9,10 @@ import UIKit
 
 final class SearchViewController: UIViewController {
 
-    @IBOutlet weak var FindRecipesButton: DarkButton!
-    @IBOutlet weak var SaveButton: UIButton!
-    @IBOutlet weak var AddButton: DarkButton!
-    @IBOutlet weak var FilterButton: DarkButton!
+    @IBOutlet weak var findRecipesButton: DarkButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var addButton: DarkButton!
+    @IBOutlet weak var filterButton: DarkButton!
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -28,12 +28,16 @@ final class SearchViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        FilterButton.title = "Filter by"
 
-        AddButton.configuration?.image = UIImage(systemName: "plus")
-        FindRecipesButton.title = "FIND RECIPES"
-        SaveButton.configuration?.image = UIImage(systemName: "bookmark")
-//        ?.withTintColor(UIColor(red: 63/255, green: 64/255, blue: 69/255, alpha: 1))
+        filterButton.title = "Filter by"
+        filterButton.configuration?.image = UIImage(systemName: "slider.horizontal.3")
+        filterButton.semanticContentAttribute = .forceRightToLeft
+
+        addButton.configuration?.image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy))
+        findRecipesButton.title = "FIND RECIPES"
+
+        saveButton.tintColor = .black
+        saveButton.configuration?.image = UIImage(systemName: "bookmark", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy))
     }
 }
 
@@ -47,8 +51,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeTagFilter", for: indexPath) as? RecipeTagFilter else { fatalError() }
 
-        cell.TagName = model.tags[indexPath.item].tagButton
-        cell.DeleteButton = model.tags[indexPath.item].deleteButton
+        cell.tagName.title = model.tags[indexPath.item]
 
         return cell
     }

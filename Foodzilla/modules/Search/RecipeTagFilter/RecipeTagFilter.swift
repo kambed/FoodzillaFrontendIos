@@ -9,8 +9,8 @@ import UIKit
 
 class RecipeTagFilter: UICollectionViewCell {
 
-    @IBOutlet weak var DeleteButton: DarkButton!
-    @IBOutlet weak var TagName: LandingButton!
+    @IBOutlet weak var deleteButton: DarkButton!
+    @IBOutlet weak var tagName: LandingButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +19,8 @@ class RecipeTagFilter: UICollectionViewCell {
     }
 
     private func setUpButtons() {
-        DeleteButton.configuration?.image = UIImage(systemName: "minus.circle.fill")
-        TagName.title = "Test"
+        deleteButton.title = ""
+        deleteButton.configuration?.image = UIImage(systemName: "minus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 12.0, weight: .bold))
+        deleteButton.configuration?.cornerStyle = .capsule
     }
 }

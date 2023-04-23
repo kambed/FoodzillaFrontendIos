@@ -17,12 +17,15 @@ class DarkButton: UIButton {
         }
     }
 
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.configuration = .filled()
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        var configuration: UIButton.Configuration = .filled()
-        configuration.baseBackgroundColor = UIColor(red: 63/255, green: 64/255, blue: 69/255, alpha: 1)
-        configuration.imagePadding = 10
-        self.configuration = configuration
+        self.configuration?.baseBackgroundColor = UIColor(red: 63/255, green: 64/255, blue: 69/255, alpha: 1)
+        self.configuration?.imagePadding = 10
     }
 }
