@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var getStarteButton: LandingButton!
+    @IBOutlet var getStartedButton: LandingButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         descriptionLabel.font = FontFamily.SFProText.regular.font(size: 18)
         descriptionLabel.textColor = .white
 
-        getStarteButton.title = "Get started"
-        getStarteButton.configuration?.image = UIImage(systemName: "paperplane.fill")
+        getStartedButton.title = "Get started"
+        getStartedButton.configuration?.image = UIImage(systemName: "paperplane.fill")
     }
 }
