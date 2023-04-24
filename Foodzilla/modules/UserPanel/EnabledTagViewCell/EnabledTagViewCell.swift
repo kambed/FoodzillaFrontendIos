@@ -18,5 +18,6 @@ class EnabledTagViewCell: UICollectionViewCell {
 
         private func setUpLabel() {
             tagLabel.font = FontFamily.SFProText.regular.font(size: 14)
+            tagLabel.sizeToFit()
         }
 }
