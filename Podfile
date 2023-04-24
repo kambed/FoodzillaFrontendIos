@@ -6,6 +6,7 @@ target 'Foodzilla' do
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'Apollo'
+  pod 'MaterialComponents/Chips'
 end
 
 post_install do |installer|
