@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        let vc = UIStoryboard(name: "Filter", bundle: nil).instantiateViewController(withIdentifier: "Filter")
+        let vc = UIStoryboard(name: "Filters", bundle: nil).instantiateViewController(withIdentifier: "Filters")
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }

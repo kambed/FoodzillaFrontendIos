@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GY-Fa-14m">
-                    <rect key="frame" x="8" y="15.999999999999998" width="41.333333333333336" height="20.333333333333329"/>
+                    <rect key="frame" x="16.000000000000004" y="15.999999999999998" width="41.333333333333343" height="20.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAH-Bb-vcc">
-                    <rect key="frame" x="8" y="40.333333333333336" width="41.333333333333336" height="20.333333333333336"/>
+                    <rect key="frame" x="16.000000000000004" y="40.333333333333336" width="41.333333333333343" height="20.333333333333336"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -45,7 +44,7 @@
                         </button>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wz5-zd-HWh">
                             <rect key="frame" x="192.66666666666666" y="0.0" width="1" height="32"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="ifb-g9-5AS"/>
                             </constraints>
@@ -61,31 +60,29 @@
                     </constraints>
                 </stackView>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mWn-gY-ENC">
-                    <rect key="frame" x="6" y="67" width="381" height="80"/>
+                    <rect key="frame" x="14" y="68.666666666666671" width="365" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4SY-ch-DuB"/>
+                    </constraints>
                 </slider>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="0GY-Fa-14m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="0Wk-Qy-tET"/>
-                <constraint firstItem="0GY-Fa-14m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="3sN-iQ-var"/>
-                <constraint firstItem="mWn-gY-ENC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="61T-ci-LVu"/>
-                <constraint firstItem="XRm-AF-9vZ" firstAttribute="top" secondItem="mWn-gY-ENC" secondAttribute="bottom" constant="8" id="8Ru-XR-nFz"/>
-                <constraint firstItem="NAH-Bb-vcc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="AY6-zq-fWA"/>
+                <constraint firstItem="0GY-Fa-14m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="3sN-iQ-var"/>
+                <constraint firstItem="mWn-gY-ENC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="61T-ci-LVu"/>
+                <constraint firstItem="XRm-AF-9vZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mWn-gY-ENC" secondAttribute="bottom" constant="8" id="8Ru-XR-nFz"/>
+                <constraint firstItem="NAH-Bb-vcc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="AY6-zq-fWA"/>
                 <constraint firstAttribute="trailing" secondItem="XRm-AF-9vZ" secondAttribute="trailing" constant="8" id="QDb-Xu-Pa1"/>
-                <constraint firstItem="mWn-gY-ENC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="U7Q-2a-OOp"/>
                 <constraint firstItem="NAH-Bb-vcc" firstAttribute="top" secondItem="0GY-Fa-14m" secondAttribute="bottom" constant="4" id="V1L-wH-wsw"/>
                 <constraint firstAttribute="bottom" secondItem="XRm-AF-9vZ" secondAttribute="bottom" constant="8" id="bhK-Qg-dFq"/>
                 <constraint firstItem="XRm-AF-9vZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="dyJ-dI-C7P"/>
-                <constraint firstAttribute="trailing" secondItem="mWn-gY-ENC" secondAttribute="trailing" constant="8" id="zaH-Ro-ZA5"/>
+                <constraint firstAttribute="trailing" secondItem="mWn-gY-ENC" secondAttribute="trailing" constant="16" id="zaH-Ro-ZA5"/>
+                <constraint firstItem="mWn-gY-ENC" firstAttribute="top" secondItem="NAH-Bb-vcc" secondAttribute="bottom" constant="8" id="zdO-O3-cRf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-231" y="-4"/>
+            <point key="canvasLocation" x="-367" y="-73"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
