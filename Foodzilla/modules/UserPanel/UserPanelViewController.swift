@@ -37,6 +37,7 @@ final class UserPanelViewController: UIViewController {
         tagsLabel.text = ""
 
         for (index, _) in model.tags.enumerated() {
+            tagsLabel.font = FontFamily.SFProText.regular.font(size: 14)
             tagsLabel.text?.append("\(model.tags[index].name) ")
 
             if index != model.tags.count - 1 {
