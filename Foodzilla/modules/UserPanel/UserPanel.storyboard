@@ -4,8 +4,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_login" translatesAutoresizingMaskIntoConstraints="NO" id="TjD-xr-N18">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="TjD-xr-N18">
                                 <rect key="frame" x="161" y="89" width="71" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="QeT-5R-k03"/>
@@ -45,14 +47,17 @@
                                     <constraint firstItem="7tr-iJ-URV" firstAttribute="centerY" secondItem="IGo-HZ-zCh" secondAttribute="centerY" id="dZ3-Ga-QjV"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl8-X0-fxT">
-                                <rect key="frame" x="107" y="619.66666666666663" width="178" height="43.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl8-X0-fxT" customClass="LandingButton" customModule="Foodzilla" customModuleProvider="target">
+                                <rect key="frame" x="107" y="619.66666666666663" width="178" height="65"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-oZ-CDX">
-                                <rect key="frame" x="58" y="701" width="277" height="42"/>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-bW-ZaY">
+                                <rect key="frame" x="74" y="722.66666666666663" width="71.333333333333314" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcd-Gy-Rh8">
                                 <rect key="frame" x="112" y="187" width="170" height="28.666666666666657"/>
                                 <subviews>
@@ -70,31 +75,58 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4n6-XR-EUu">
+                                <rect key="frame" x="155.33333333333337" y="722.66666666666663" width="189.66666666666663" height="79.333333333333371"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dvt-VS-ipc">
+                                    <size key="itemSize" width="65" height="30"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EnabledTagViewCell" id="qF9-mD-vKY" customClass="EnabledTagViewCell" customModule="Foodzilla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="odc-sI-i7G">
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="65" height="30"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4n6-XR-EUu" secondAttribute="bottom" constant="16" id="5Ef-iQ-KMB"/>
                             <constraint firstItem="IGo-HZ-zCh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="23" id="6h3-wK-did"/>
+                            <constraint firstItem="4n6-XR-EUu" firstAttribute="top" secondItem="Sl8-X0-fxT" secondAttribute="bottom" constant="38" id="6r5-y3-p7R"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TjD-xr-N18" secondAttribute="trailing" constant="161" id="Epr-rq-znT"/>
                             <constraint firstItem="Jcd-Gy-Rh8" firstAttribute="top" secondItem="TjD-xr-N18" secondAttribute="bottom" constant="30" id="FDB-Ws-sFq"/>
                             <constraint firstItem="Sl8-X0-fxT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="107" id="HnC-EQ-k19"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0vU-oZ-CDX" secondAttribute="bottom" constant="75" id="Pn7-yw-PIB"/>
                             <constraint firstItem="Jcd-Gy-Rh8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="112" id="QGa-kt-N5g"/>
                             <constraint firstItem="TjD-xr-N18" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="161" id="SQ9-Sn-ujx"/>
                             <constraint firstItem="Sl8-X0-fxT" firstAttribute="top" secondItem="IGo-HZ-zCh" secondAttribute="bottom" constant="183" id="TX7-mu-O8T"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sl8-X0-fxT" secondAttribute="trailing" constant="108" id="XMe-Fu-vGz"/>
                             <constraint firstItem="IGo-HZ-zCh" firstAttribute="top" secondItem="Jcd-Gy-Rh8" secondAttribute="bottom" constant="65" id="Xu4-jg-xhg"/>
-                            <constraint firstItem="0vU-oZ-CDX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="58" id="dcc-Pp-IAE"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="rLP-bW-ZaY" secondAttribute="bottom" constant="75" id="ZuV-aG-Btg"/>
+                            <constraint firstItem="4n6-XR-EUu" firstAttribute="leading" secondItem="rLP-bW-ZaY" secondAttribute="trailing" constant="10" id="cwp-2K-owK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IGo-HZ-zCh" secondAttribute="trailing" constant="24" id="ddT-z3-5Gx"/>
+                            <constraint firstItem="rLP-bW-ZaY" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="58" id="dmu-3g-wph"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jcd-Gy-Rh8" secondAttribute="trailing" constant="111" id="e2m-7W-PJ9"/>
-                            <constraint firstItem="0vU-oZ-CDX" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="701" id="e7E-1p-WsV"/>
                             <constraint firstItem="TjD-xr-N18" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="nAe-OJ-qoZ"/>
-                            <constraint firstItem="0vU-oZ-CDX" firstAttribute="top" secondItem="Sl8-X0-fxT" secondAttribute="bottom" constant="38" id="pQ3-gB-zqG"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0vU-oZ-CDX" secondAttribute="trailing" constant="58" id="rkx-L0-lpM"/>
+                            <constraint firstItem="rLP-bW-ZaY" firstAttribute="top" secondItem="Sl8-X0-fxT" secondAttribute="bottom" constant="38" id="v2n-Fd-fBI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4n6-XR-EUu" secondAttribute="trailing" constant="48" id="xeC-JT-xhY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="avatarImage" destination="TjD-xr-N18" id="bRV-NU-rOU"/>
+                        <outlet property="emailLabel" destination="7TU-cX-VoN" id="uzf-w4-xtd"/>
+                        <outlet property="firstNameLabel" destination="8C3-YB-wXn" id="xjo-ns-e1r"/>
+                        <outlet property="lastNameLabel" destination="7tr-iJ-URV" id="Ow5-JL-GbQ"/>
+                        <outlet property="modifyButton" destination="Sl8-X0-fxT" id="51f-OG-WKM"/>
                         <outlet property="usernameLabel" destination="HRJ-k2-Y1f" id="7vI-kg-GW5"/>
                     </connections>
                 </viewController>
@@ -104,7 +136,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image_login" width="190" height="190"/>
+        <image name="image_avatar" width="190" height="190"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

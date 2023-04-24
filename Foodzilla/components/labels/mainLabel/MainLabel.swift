@@ -23,6 +23,7 @@ class MainLabel: BaseView {
 
     private func setUpLabels() {
         mainLabel.font = FontFamily.SFProText.regular.font(size: 17)
+        mainLabel.textColor = UIColor(red: 60/255, green: 60/255, blue: 67/255, alpha: 0.5)
     }
 
 }
