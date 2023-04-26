@@ -1,13 +1,13 @@
 //
-//  LandingButton.swift
+//  DarkButton.swift
 //  Foodzilla
 //
-//  Created by Paweł on 28/03/2023.
+//  Created by Ania Banachowicz on 20/04/2023.
 //
 
 import UIKit
 
-class LandingButton: UIButton {
+class DarkButton: UIButton {
 
     var title: String = "" {
         didSet {
@@ -25,6 +25,7 @@ class LandingButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        self.configuration?.baseBackgroundColor = UIColor(red: 63/255, green: 64/255, blue: 69/255, alpha: 1)
         self.configuration?.imagePadding = 10
     }
 }
