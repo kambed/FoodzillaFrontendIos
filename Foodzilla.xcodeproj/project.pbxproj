@@ -13,6 +13,7 @@
 		6A8B165B29E72DB900DAE5D0 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165A29E72DB900DAE5D0 /* MainTextField.swift */; };
 		6A8B165D29E72DBC00DAE5D0 /* MainTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B165C29E72DBC00DAE5D0 /* MainTextField.xib */; };
 		6A8B165F29E7302C00DAE5D0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165E29E7302C00DAE5D0 /* BaseView.swift */; };
+		6AA0A69B29F902F50038EF18 /* NutritionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA0A69A29F902F50038EF18 /* NutritionSheet.storyboard */; };
 		6AADB8C729D37A8200A5FC44 /* LandingButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AADB8C629D37A8200A5FC44 /* LandingButton.xib */; };
 		6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADB8C829D37AE800A5FC44 /* LandingButton.swift */; };
 		6AADB8CE29D37CC000A5FC44 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AADB8CD29D37CC000A5FC44 /* Login.storyboard */; };
@@ -57,7 +58,6 @@
 		81CDE5EF29F71BBB00C5CA79 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CDE5EE29F71BBB00C5CA79 /* Recipe.storyboard */; };
 		81CDE5F129F71BCD00C5CA79 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CDE5F029F71BCD00C5CA79 /* RecipeViewController.swift */; };
 		81CDE5F829F7220700C5CA79 /* NutritionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CDE5F729F7220700C5CA79 /* NutritionSheetViewController.swift */; };
-		81E2F6B329F856F0004EC3FF /* NutritionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E2F6B229F856F0004EC3FF /* NutritionSheet.xib */; };
 		81EC69E229D5E85D0004D71D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EC69E129D5E85D0004D71D /* Register.storyboard */; };
 		81EC69E429D5E8710004D71D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EC69E329D5E8710004D71D /* RegisterViewController.swift */; };
 		FBC44A82EA39A117B9DB62AD /* Pods_Foodzilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */; };
@@ -71,6 +71,7 @@
 		6A8B165A29E72DB900DAE5D0 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 		6A8B165C29E72DBC00DAE5D0 /* MainTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTextField.xib; sourceTree = "<group>"; };
 		6A8B165E29E7302C00DAE5D0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		6AA0A69A29F902F50038EF18 /* NutritionSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NutritionSheet.storyboard; sourceTree = "<group>"; };
 		6AADB8C629D37A8200A5FC44 /* LandingButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingButton.xib; sourceTree = "<group>"; };
 		6AADB8C829D37AE800A5FC44 /* LandingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingButton.swift; sourceTree = "<group>"; };
 		6AADB8CD29D37CC000A5FC44 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		81CDE5EE29F71BBB00C5CA79 /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
 		81CDE5F029F71BCD00C5CA79 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		81CDE5F729F7220700C5CA79 /* NutritionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionSheetViewController.swift; sourceTree = "<group>"; };
-		81E2F6B229F856F0004EC3FF /* NutritionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionSheet.xib; sourceTree = "<group>"; };
 		81EC69E129D5E85D0004D71D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		81EC69E329D5E8710004D71D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodzilla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +177,13 @@
 				6A8B165C29E72DBC00DAE5D0 /* MainTextField.xib */,
 			);
 			path = MainTextField;
+			sourceTree = "<group>";
+		};
+		6AA0A69929F901840038EF18 /* NutritionSheetNew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NutritionSheetNew;
 			sourceTree = "<group>";
 		};
 		6AADB8C229D3793000A5FC44 /* components */ = {
@@ -375,6 +382,7 @@
 		81CDE5ED29F71BA600C5CA79 /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				6AA0A69929F901840038EF18 /* NutritionSheetNew */,
 				81CDE5F229F71C0200C5CA79 /* NutritionSheet */,
 				81CDE5EE29F71BBB00C5CA79 /* Recipe.storyboard */,
 				81CDE5F029F71BCD00C5CA79 /* RecipeViewController.swift */,
@@ -386,7 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				81CDE5F729F7220700C5CA79 /* NutritionSheetViewController.swift */,
-				81E2F6B229F856F0004EC3FF /* NutritionSheet.xib */,
+				6AA0A69A29F902F50038EF18 /* NutritionSheet.storyboard */,
 			);
 			path = NutritionSheet;
 			sourceTree = "<group>";
@@ -473,7 +481,6 @@
 				6AFDB20929D370A500AC60EF /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				6AFDB20D29D370A500AC60EF /* SF-Pro-Text-Medium.otf in Resources */,
 				6AFDB20729D370A500AC60EF /* SF-Pro-Text-ThinItalic.otf in Resources */,
-				81E2F6B329F856F0004EC3FF /* NutritionSheet.xib in Resources */,
 				6AFDB20A29D370A500AC60EF /* SF-Pro-Text-Semibold.otf in Resources */,
 				6AADB8CE29D37CC000A5FC44 /* Login.storyboard in Resources */,
 				6AFDB20E29D370A500AC60EF /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
@@ -488,6 +495,7 @@
 				6AFDB20129D370A500AC60EF /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				6AD049F929C232D600B60848 /* Assets.xcassets in Resources */,
 				813E15F529F1DCC900F4C492 /* Search.storyboard in Resources */,
+				6AA0A69B29F902F50038EF18 /* NutritionSheet.storyboard in Resources */,
 				6AD049F729C232D500B60848 /* Main.storyboard in Resources */,
 				6AFDB20629D370A500AC60EF /* SF-Pro-Text-Thin.otf in Resources */,
 				6AADB8C729D37A8200A5FC44 /* LandingButton.xib in Resources */,

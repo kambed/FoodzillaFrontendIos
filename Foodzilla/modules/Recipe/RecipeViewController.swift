@@ -71,10 +71,11 @@ class RecipeViewController: UIViewController {
 //
 //        sheetPresentationController.detents = [.medium()]
 
-        let sheetViewC = NutritionSheetViewController()
-        sheetViewC.sheetPresentationController?.detents = [.medium(), .large()]
+        let vc = UIStoryboard(name: "NutritionSheet", bundle: nil).instantiateViewController(withIdentifier: "NutritionSheet")
 
-        self.present(sheetViewC, animated: true, completion: nil)
+        vc.sheetPresentationController?.detents = [.medium(), .large()]
+
+        self.present(vc, animated: true, completion: nil)
 
 //        if let sheet = NutritionSheetViewController().sheetPresentationController {
 //            sheet.detents = [.medium(), .large()]

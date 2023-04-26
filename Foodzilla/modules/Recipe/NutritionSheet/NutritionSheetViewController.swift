@@ -15,16 +15,8 @@ class NutritionSheetViewController: UIViewController {
 
 //    weak var delegate: NutritionSheetViewControllerDelegate?
 //
-//    init() {
-//        super.init(nibName: "NutritionSheet", bundle: nil)
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
     }
+
 }
