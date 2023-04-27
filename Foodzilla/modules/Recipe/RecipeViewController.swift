@@ -26,6 +26,10 @@ class RecipeViewController: UIViewController {
 
     @IBOutlet weak var stepsLabel: UILabel!
 
+    @IBOutlet weak var ingredientsStackView: UIStackView!
+
+    @IBOutlet weak var starUIView: UIView!
+    @IBOutlet weak var stepsStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,6 +56,28 @@ class RecipeViewController: UIViewController {
         ingredientsLabel.font = FontFamily.SFProText.bold.font(size: 16)
 
         stepsLabel.font = FontFamily.SFProText.bold.font(size: 16)
+
+        let recipeIngredients = ["boneless skinless chicken", "condensed cream", "egg"]
+
+        for(_, ingredient) in recipeIngredients.enumerated() {
+            let label = IngredientLabel()
+            label.ingNameLabel.text = "\(ingredient)"
+
+            ingredientsStackView.addArrangedSubview(label)
+        }
+
+        let recipeSteps = ["Combine soup", "Mix flour"]
+
+        for(index, step) in recipeSteps.enumerated() {
+            let label = UILabel()
+            label.text = "\(index + 1). \(step)"
+            stepsStackView.addArrangedSubview(label)
+
+            let starView = StarView(frame: CGRect(x: 0, y: 0, width: 50, height: 20))
+            starView.rating = 4
+            starView.backgroundColor = .clear
+            starUIView.addSubview(starView)
+        }
     }
 
     @IBAction func showNutrition(_ sender: Any) {

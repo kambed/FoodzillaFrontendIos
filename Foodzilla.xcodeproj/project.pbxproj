@@ -50,6 +50,7 @@
 		813E15F729F1DCDD00F4C492 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15F629F1DCDD00F4C492 /* SearchViewController.swift */; };
 		813E15FC29F1DEAB00F4C492 /* DarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15FB29F1DEAB00F4C492 /* DarkButton.swift */; };
 		813E15FE29F1DF0A00F4C492 /* DarkButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813E15FD29F1DF0A00F4C492 /* DarkButton.xib */; };
+		8171991429FA7AD1009EAC4D /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171991329FA7AD1009EAC4D /* StarView.swift */; };
 		8187AC6929F1E84E00AA0904 /* RecipeTagFilter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */; };
 		8187AC6B29F1E87B00AA0904 /* RecipeTagFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187AC6A29F1E87B00AA0904 /* RecipeTagFilter.swift */; };
 		8187AC6F29F1ED3100AA0904 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8187AC6E29F1ED3100AA0904 /* SearchViewModel.swift */; };
@@ -112,6 +113,7 @@
 		813E15F629F1DCDD00F4C492 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		813E15FB29F1DEAB00F4C492 /* DarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButton.swift; sourceTree = "<group>"; };
 		813E15FD29F1DF0A00F4C492 /* DarkButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DarkButton.xib; sourceTree = "<group>"; };
+		8171991329FA7AD1009EAC4D /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTagFilter.xib; sourceTree = "<group>"; };
 		8187AC6A29F1E87B00AA0904 /* RecipeTagFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTagFilter.swift; sourceTree = "<group>"; };
 		8187AC6E29F1ED3100AA0904 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		6AADB8C229D3793000A5FC44 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				8171990F29FA7A93009EAC4D /* StarView */,
 				81EB6EB029F9C8DC00ECE811 /* labels */,
 				6A8B165829E72DA100DAE5D0 /* textFields */,
 				6AADB8C329D3793600A5FC44 /* buttons */,
@@ -355,6 +358,14 @@
 				813E15FD29F1DF0A00F4C492 /* DarkButton.xib */,
 			);
 			path = DarkButton;
+			sourceTree = "<group>";
+		};
+		8171990F29FA7A93009EAC4D /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				8171991329FA7AD1009EAC4D /* StarView.swift */,
+			);
+			path = StarView;
 			sourceTree = "<group>";
 		};
 		8187AC6729F1E7F700AA0904 /* RecipeTagFilter */ = {
@@ -594,6 +605,7 @@
 				6AD049F429C232D500B60848 /* ViewController.swift in Sources */,
 				6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */,
 				6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */,
+				8171991429FA7AD1009EAC4D /* StarView.swift in Sources */,
 				6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */,
 				8187AC6F29F1ED3100AA0904 /* SearchViewModel.swift in Sources */,
 				6AFDB21329D3717E00AC60EF /* Images.swift in Sources */,

@@ -11,6 +11,7 @@ class IngredientLabel: BaseView {
 //    override class func awakeFromNib() {
 //        super.awakeFromNib()
 //    }
+    @IBOutlet weak var ingNameLabel: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
