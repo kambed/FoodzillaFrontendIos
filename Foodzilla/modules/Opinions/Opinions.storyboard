@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Opinions View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Opinions" id="Y6W-OH-hqX" customClass="OpinionsViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-eV-flo">
+                                <rect key="frame" x="78" y="69" width="237" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ilz-gS-LfS" customClass="LandingButton" customModule="Foodzilla" customModuleProvider="target">
+                                <rect key="frame" x="39" y="129.33333333333334" width="314" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Co9-fi-KTw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="trailing"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAC-fb-c5A">
+                                <rect key="frame" x="13" y="66" width="28" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="duH-RE-f3n"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ilz-gS-LfS" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="23" id="1pS-k3-nHE"/>
+                            <constraint firstItem="N5f-eV-flo" firstAttribute="leading" secondItem="HAC-fb-c5A" secondAttribute="trailing" constant="37" id="8cc-Un-XW1"/>
+                            <constraint firstItem="Ilz-gS-LfS" firstAttribute="top" secondItem="N5f-eV-flo" secondAttribute="bottom" constant="40" id="D2w-qh-7cO"/>
+                            <constraint firstItem="HAC-fb-c5A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="13" id="GOJ-bj-87F"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N5f-eV-flo" secondAttribute="trailing" constant="78" id="Gvd-xx-1fE"/>
+                            <constraint firstItem="HAC-fb-c5A" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="7" id="Mv0-hN-GMf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ilz-gS-LfS" secondAttribute="trailing" constant="24" id="PaY-3m-CF9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HAC-fb-c5A" secondAttribute="bottom" constant="762" id="Sgb-rz-xBJ"/>
+                            <constraint firstItem="N5f-eV-flo" firstAttribute="leading" secondItem="HAC-fb-c5A" secondAttribute="trailing" constant="37" id="WpG-0b-Cn5"/>
+                            <constraint firstItem="Ilz-gS-LfS" firstAttribute="top" secondItem="N5f-eV-flo" secondAttribute="bottom" constant="40" id="fA7-bD-Bt0"/>
+                            <constraint firstItem="N5f-eV-flo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="oX4-bc-PnG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recipeName" destination="N5f-eV-flo" id="T4t-6f-bYa"/>
+                        <outlet property="sortButton" destination="Ilz-gS-LfS" id="U2Q-co-p8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
