@@ -51,6 +51,8 @@
 		813E15FE29F1DF0A00F4C492 /* DarkButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813E15FD29F1DF0A00F4C492 /* DarkButton.xib */; };
 		81611DCD29FAD5C700DCF8FA /* OpinionCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81611DCC29FAD5C700DCF8FA /* OpinionCard.xib */; };
 		81611DCF29FAD5D000DCF8FA /* OpinionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81611DCE29FAD5D000DCF8FA /* OpinionCard.swift */; };
+		81611DD229FAF84D00DCF8FA /* AddOpinionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81611DD129FAF84D00DCF8FA /* AddOpinionSheet.storyboard */; };
+		81611DD429FAF85A00DCF8FA /* AddOpinionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */; };
 		817F392429FACEDF00C182B6 /* Opinions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817F392329FACEDF00C182B6 /* Opinions.storyboard */; };
 		817F392629FACEEC00C182B6 /* OpinionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F392529FACEEC00C182B6 /* OpinionsViewController.swift */; };
 		8187AC6929F1E84E00AA0904 /* RecipeTagFilter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */; };
@@ -116,6 +118,8 @@
 		813E15FD29F1DF0A00F4C492 /* DarkButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DarkButton.xib; sourceTree = "<group>"; };
 		81611DCC29FAD5C700DCF8FA /* OpinionCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpinionCard.xib; sourceTree = "<group>"; };
 		81611DCE29FAD5D000DCF8FA /* OpinionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionCard.swift; sourceTree = "<group>"; };
+		81611DD129FAF84D00DCF8FA /* AddOpinionSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOpinionSheet.storyboard; sourceTree = "<group>"; };
+		81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOpinionViewController.swift; sourceTree = "<group>"; };
 		817F392329FACEDF00C182B6 /* Opinions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Opinions.storyboard; sourceTree = "<group>"; };
 		817F392529FACEEC00C182B6 /* OpinionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionsViewController.swift; sourceTree = "<group>"; };
 		8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTagFilter.xib; sourceTree = "<group>"; };
@@ -377,6 +381,8 @@
 		81611DD029FADD2C00DCF8FA /* AddOpinion */ = {
 			isa = PBXGroup;
 			children = (
+				81611DD129FAF84D00DCF8FA /* AddOpinionSheet.storyboard */,
+				81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */,
 			);
 			path = AddOpinion;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				6A8B165D29E72DBC00DAE5D0 /* MainTextField.xib in Resources */,
 				6AFDB20329D370A500AC60EF /* SF-Pro-Text-Regular.otf in Resources */,
 				8187AC6929F1E84E00AA0904 /* RecipeTagFilter.xib in Resources */,
+				81611DD229FAF84D00DCF8FA /* AddOpinionSheet.storyboard in Resources */,
 				6AD049FC29C232D600B60848 /* LaunchScreen.storyboard in Resources */,
 				6AFDB1FF29D370A500AC60EF /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				6AFDB20029D370A500AC60EF /* SF-Pro-Text-Light.otf in Resources */,
@@ -617,6 +624,7 @@
 				81EC69E429D5E8710004D71D /* RegisterViewController.swift in Sources */,
 				6AD049F429C232D500B60848 /* ViewController.swift in Sources */,
 				6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */,
+				81611DD429FAF85A00DCF8FA /* AddOpinionViewController.swift in Sources */,
 				6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */,
 				6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */,
 				81CE7E1529F534590078711C /* UserPanelViewController.swift in Sources */,

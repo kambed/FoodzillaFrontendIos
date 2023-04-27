@@ -16,6 +16,13 @@ final class OpinionsViewController: UIViewController {
     @IBOutlet weak var addOpinionButton: DarkButton!
 
     @IBAction func addOpinionSheet(_ sender: Any) {
+
+        let vc = UIStoryboard(name: "AddOpinionSheet", bundle: nil).instantiateViewController(withIdentifier: "AddOpinionSheet")
+
+        vc.sheetPresentationController?.detents = [.medium(), .large()]
+
+        self.present(vc, animated: true, completion: nil)
+
     }
 
     override func viewDidLoad() {
