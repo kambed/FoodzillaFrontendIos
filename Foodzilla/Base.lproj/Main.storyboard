@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="5kZ-6g-Ldq" id="AQ8-YS-aWq"/>
-                        <outlet property="getStarteButton" destination="f4h-wU-rD8" id="3rb-jI-Gjc"/>
+                        <outlet property="getStartedButton" destination="f4h-wU-rD8" id="X8B-UD-vel"/>
                         <outlet property="titleLabel" destination="2xz-NK-jpp" id="zfH-nm-AwY"/>
                     </connections>
                 </viewController>
