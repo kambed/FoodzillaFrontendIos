@@ -13,7 +13,7 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Opinions" id="Y6W-OH-hqX" customClass="OpinionsViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ilz-gS-LfS" customClass="LandingButton" customModule="Foodzilla" customModuleProvider="target">
-                                <rect key="frame" x="39" y="129.33333333333334" width="314" height="53"/>
+                                <rect key="frame" x="23" y="129.33333333333334" width="346" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="Co9-fi-KTw"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="trailing"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAC-fb-c5A">
-                                <rect key="frame" x="13" y="66" width="28" height="35"/>
+                                <rect key="frame" x="13" y="66" width="28" height="34.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="duH-RE-f3n"/>
                                 </constraints>
@@ -40,31 +40,64 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="tob-1k-6b1">
+                                <rect key="frame" x="15" y="277" width="363" height="407.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6i-XZ-hyw" customClass="OpinionCard" customModule="Foodzilla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="363" height="185.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGd-xj-x8Q" customClass="OpinionCard" customModule="Foodzilla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="221.66666666666669" width="363" height="185.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV6-0d-rtF" customClass="DarkButton" customModule="Foodzilla" customModuleProvider="target">
+                                <rect key="frame" x="23" y="202.33333333333334" width="346" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="YLy-wP-loJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add opinion"/>
+                                <connections>
+                                    <action selector="addOpinionSheet:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5SW-Xg-Cvo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ilz-gS-LfS" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="23" id="1pS-k3-nHE"/>
+                            <constraint firstItem="Ilz-gS-LfS" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="23" id="1pS-k3-nHE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="tob-1k-6b1" secondAttribute="bottom" constant="133.66666666666674" id="3k8-Hf-U6e"/>
                             <constraint firstItem="N5f-eV-flo" firstAttribute="leading" secondItem="HAC-fb-c5A" secondAttribute="trailing" constant="37" id="8cc-Un-XW1"/>
                             <constraint firstItem="Ilz-gS-LfS" firstAttribute="top" secondItem="N5f-eV-flo" secondAttribute="bottom" constant="40" id="D2w-qh-7cO"/>
+                            <constraint firstItem="rV6-0d-rtF" firstAttribute="top" secondItem="Ilz-gS-LfS" secondAttribute="bottom" constant="20" id="Dzp-Ut-0LZ"/>
                             <constraint firstItem="HAC-fb-c5A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="13" id="GOJ-bj-87F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N5f-eV-flo" secondAttribute="trailing" constant="78" id="Gvd-xx-1fE"/>
+                            <constraint firstItem="tob-1k-6b1" firstAttribute="top" secondItem="rV6-0d-rtF" secondAttribute="bottom" constant="40" id="JB7-Mh-7OI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tob-1k-6b1" secondAttribute="trailing" constant="15" id="JUm-kT-8md"/>
                             <constraint firstItem="HAC-fb-c5A" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="7" id="Mv0-hN-GMf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ilz-gS-LfS" secondAttribute="trailing" constant="24" id="PaY-3m-CF9"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HAC-fb-c5A" secondAttribute="bottom" constant="762" id="Sgb-rz-xBJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ilz-gS-LfS" secondAttribute="trailing" constant="24" id="PaY-3m-CF9"/>
                             <constraint firstItem="N5f-eV-flo" firstAttribute="leading" secondItem="HAC-fb-c5A" secondAttribute="trailing" constant="37" id="WpG-0b-Cn5"/>
+                            <constraint firstItem="rV6-0d-rtF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="23" id="YCE-B9-bn4"/>
                             <constraint firstItem="Ilz-gS-LfS" firstAttribute="top" secondItem="N5f-eV-flo" secondAttribute="bottom" constant="40" id="fA7-bD-Bt0"/>
+                            <constraint firstItem="tob-1k-6b1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="iOo-E8-6QC"/>
+                            <constraint firstAttribute="trailing" secondItem="rV6-0d-rtF" secondAttribute="trailing" constant="24" id="mv7-G0-JP8"/>
                             <constraint firstItem="N5f-eV-flo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="oX4-bc-PnG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addOpinionButton" destination="rV6-0d-rtF" id="ppc-3h-d2k"/>
+                        <outlet property="opinionCard" destination="K6i-XZ-hyw" id="TUv-bq-idx"/>
+                        <outlet property="opinionCard2" destination="NGd-xj-x8Q" id="ulp-sX-81k"/>
                         <outlet property="recipeName" destination="N5f-eV-flo" id="T4t-6f-bYa"/>
                         <outlet property="sortButton" destination="Ilz-gS-LfS" id="U2Q-co-p8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123" y="-2"/>
+            <point key="canvasLocation" x="122.90076335877862" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
