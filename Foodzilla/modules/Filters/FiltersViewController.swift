@@ -11,6 +11,8 @@ import MaterialComponents
 class FiltersViewController: UIViewController {
 
     
+    @IBOutlet weak var screenTitleLabel: UILabel!
+    @IBOutlet weak var searchTabLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var preparationTime: PreparationTime!
@@ -45,9 +47,14 @@ class FiltersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        screenTitleLabel.text = "Choose tags"
+        screenTitleLabel.font = FontFamily.SFProText.bold.font(size: 22)
         descriptionLabel.text = "tags will be applied in order to filter recipes in search tab"
+        descriptionLabel.font = FontFamily.SFProText.regular.font(size: 15)
         recentTagsLabel.text = "Recent tags"
+        recentTagsLabel.font = FontFamily.SFProText.bold.font(size: 18)
         otherTagsLabel.text = "Other tags"
+        otherTagsLabel.font = FontFamily.SFProText.bold.font(size: 18)
         
         recentTagsCV = RecentTagsCV(data: recentTagsData)
         otherTagsCV = OtherTagsCV(data: otherTagsData)
