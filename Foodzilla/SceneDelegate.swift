@@ -14,8 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "Search")
+        let vc = UIStoryboard(name: "Recipe", bundle: nil).instantiateViewController(withIdentifier: "Recipe")
         window?.rootViewController = vc
+
         window?.makeKeyAndVisible()
     }
 }
