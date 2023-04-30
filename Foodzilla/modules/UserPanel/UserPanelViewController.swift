@@ -15,11 +15,15 @@ final class UserPanelViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
 
+    @IBOutlet weak var collectionView: UICollectionView!
+
     let model: UserPanelViewModel = UserPanelViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBOutlet weak var tagsLabel: UILabel!
 
     override func loadView() {
         super.loadView()
@@ -29,22 +33,19 @@ final class UserPanelViewController: UIViewController {
         firstNameLabel.mainLabel.text = "User"
         lastNameLabel.mainLabel.text = "Name"
         emailLabel.mainLabel.text = "abc@gmail.com"
-    }
+
+        tagsLabel.text = ""
+
+        for (index, _) in model.tags.enumerated() {
+            tagsLabel.font = FontFamily.SFProText.regular.font(size: 14)
+            tagsLabel.text?.append("\(model.tags[index].name) ")
+
+            if index != model.tags.count - 1 {
+                tagsLabel.text?.append("| ")
+            }
+        }
+
+        if tagsLabel.text?.hasSuffix("| ") == true {
+            tagsLabel.text?.removeLast(2)
+        }    }
 }
-
-extension UserPanelViewController:
-    UICollectionViewDelegate, UICollectionViewDataSource {
-
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return model.tags.count
-        }
-
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EnabledTagViewCell", for: indexPath) as? EnabledTagViewCell else { fatalError() }
-            cell.tagLabel.text = model.tags[indexPath.item].name
-
-            return cell
-        }
-
-    }
