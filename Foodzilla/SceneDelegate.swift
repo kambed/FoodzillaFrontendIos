@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let vc = UIStoryboard(name: "Opinions", bundle: nil).instantiateViewController(withIdentifier: "Opinions")
         window?.rootViewController = vc
+
         window?.makeKeyAndVisible()
     }
 }

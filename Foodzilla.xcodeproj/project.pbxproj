@@ -13,12 +13,21 @@
 		6A2081B129F65B230057A95D /* PreparationTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2081B029F65B230057A95D /* PreparationTime.xib */; };
 		6A2081B929F6A2750057A95D /* ChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2081B729F6A2750057A95D /* ChipCollectionViewCell.swift */; };
 		6A2081BA29F6A2750057A95D /* ChipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2081B829F6A2750057A95D /* ChipCollectionViewCell.xib */; };
+		6A2BAF4B29FE95490006B336 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BAF4A29FE95490006B336 /* RatingView.swift */; };
+		6A2BAF4D29FE954D0006B336 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF4C29FE954D0006B336 /* RatingView.xib */; };
+		6A2BAF5029FEA3500006B336 /* RatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BAF4F29FEA3500006B336 /* RatedView.swift */; };
+		6A2BAF5229FEA3680006B336 /* RatedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5129FEA3680006B336 /* RatedView.xib */; };
+		6A2BAF5D29FEB2120006B336 /* IngredientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5829FEB2120006B336 /* IngredientLabel.swift */; };
+		6A2BAF5E29FEB2120006B336 /* IngredientLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5929FEB2120006B336 /* IngredientLabel.xib */; };
+		6A2BAF5F29FEB2120006B336 /* MainLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5B29FEB2120006B336 /* MainLabel.xib */; };
+		6A2BAF6029FEB2120006B336 /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5C29FEB2120006B336 /* MainLabel.swift */; };
 		6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165229E7259C00DAE5D0 /* RecipeTableViewCell.swift */; };
 		6A8B165529E725A000DAE5D0 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B165429E725A000DAE5D0 /* RecipeTableViewCell.xib */; };
 		6A8B165729E7273900DAE5D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165629E7273900DAE5D0 /* HomeViewModel.swift */; };
 		6A8B165B29E72DB900DAE5D0 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165A29E72DB900DAE5D0 /* MainTextField.swift */; };
 		6A8B165D29E72DBC00DAE5D0 /* MainTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B165C29E72DBC00DAE5D0 /* MainTextField.xib */; };
 		6A8B165F29E7302C00DAE5D0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165E29E7302C00DAE5D0 /* BaseView.swift */; };
+		6AA0A69B29F902F50038EF18 /* NutritionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA0A69A29F902F50038EF18 /* NutritionSheet.storyboard */; };
 		6AADB8C729D37A8200A5FC44 /* LandingButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AADB8C629D37A8200A5FC44 /* LandingButton.xib */; };
 		6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADB8C829D37AE800A5FC44 /* LandingButton.swift */; };
 		6AADB8CE29D37CC000A5FC44 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AADB8CD29D37CC000A5FC44 /* Login.storyboard */; };
@@ -67,10 +76,11 @@
 		8197350A29F59688009FCFD0 /* UserPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197350929F59688009FCFD0 /* UserPanelViewModel.swift */; };
 		81A4125729DE04DD0005AC33 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A4125629DE04DD0005AC33 /* Home.storyboard */; };
 		81A4125929DE04EC0005AC33 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A4125829DE04EC0005AC33 /* HomeViewController.swift */; };
+		81CDE5EF29F71BBB00C5CA79 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CDE5EE29F71BBB00C5CA79 /* Recipe.storyboard */; };
+		81CDE5F129F71BCD00C5CA79 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CDE5F029F71BCD00C5CA79 /* RecipeViewController.swift */; };
+		81CDE5F829F7220700C5CA79 /* NutritionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CDE5F729F7220700C5CA79 /* NutritionSheetViewController.swift */; };
 		81CE7E1329F534490078711C /* UserPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CE7E1229F534490078711C /* UserPanel.storyboard */; };
 		81CE7E1529F534590078711C /* UserPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE7E1429F534590078711C /* UserPanelViewController.swift */; };
-		81CE7E2129F545FA0078711C /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE7E2029F545FA0078711C /* MainLabel.swift */; };
-		81CE7E2329F546040078711C /* MainLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81CE7E2229F546040078711C /* MainLabel.xib */; };
 		81EC69E229D5E85D0004D71D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EC69E129D5E85D0004D71D /* Register.storyboard */; };
 		81EC69E429D5E8710004D71D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EC69E329D5E8710004D71D /* RegisterViewController.swift */; };
 		FBC44A82EA39A117B9DB62AD /* Pods_Foodzilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */; };
@@ -84,12 +94,23 @@
 		6A2081B029F65B230057A95D /* PreparationTime.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreparationTime.xib; sourceTree = "<group>"; };
 		6A2081B729F6A2750057A95D /* ChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCollectionViewCell.swift; sourceTree = "<group>"; };
 		6A2081B829F6A2750057A95D /* ChipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChipCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A2BAF4A29FE95490006B336 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		6A2BAF4C29FE954D0006B336 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
+		6A2BAF4F29FEA3500006B336 /* RatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatedView.swift; sourceTree = "<group>"; };
+		6A2BAF5129FEA3680006B336 /* RatedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatedView.xib; sourceTree = "<group>"; };
+		6A2BAF5829FEB2120006B336 /* IngredientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientLabel.swift; sourceTree = "<group>"; };
+		6A2BAF5929FEB2120006B336 /* IngredientLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientLabel.xib; sourceTree = "<group>"; };
+		6A2BAF5B29FEB2120006B336 /* MainLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainLabel.xib; sourceTree = "<group>"; };
+		6A2BAF5C29FEB2120006B336 /* MainLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
 		6A8B165229E7259C00DAE5D0 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		6A8B165429E725A000DAE5D0 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		6A8B165629E7273900DAE5D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6A8B165A29E72DB900DAE5D0 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 		6A8B165C29E72DBC00DAE5D0 /* MainTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTextField.xib; sourceTree = "<group>"; };
 		6A8B165E29E7302C00DAE5D0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		6AA0A69A29F902F50038EF18 /* NutritionSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NutritionSheet.storyboard; sourceTree = "<group>"; };
+		6AA0A6B629FA88540038EF18 /* MainLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainLabel.xib; sourceTree = "<group>"; };
+		6AA0A6B729FA88540038EF18 /* MainLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
 		6AADB8C629D37A8200A5FC44 /* LandingButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingButton.xib; sourceTree = "<group>"; };
 		6AADB8C829D37AE800A5FC44 /* LandingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingButton.swift; sourceTree = "<group>"; };
 		6AADB8CD29D37CC000A5FC44 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -140,10 +161,15 @@
 		8197350929F59688009FCFD0 /* UserPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPanelViewModel.swift; sourceTree = "<group>"; };
 		81A4125629DE04DD0005AC33 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		81A4125829DE04EC0005AC33 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		81CDE5EE29F71BBB00C5CA79 /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
+		81CDE5F029F71BCD00C5CA79 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		81CDE5F729F7220700C5CA79 /* NutritionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionSheetViewController.swift; sourceTree = "<group>"; };
 		81CE7E1229F534490078711C /* UserPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPanel.storyboard; sourceTree = "<group>"; };
 		81CE7E1429F534590078711C /* UserPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPanelViewController.swift; sourceTree = "<group>"; };
 		81CE7E2029F545FA0078711C /* MainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
 		81CE7E2229F546040078711C /* MainLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainLabel.xib; sourceTree = "<group>"; };
+		81EB6EB229F9C91300ECE811 /* IngredientLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientLabel.xib; sourceTree = "<group>"; };
+		81EB6EB429F9C91E00ECE811 /* IngredientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientLabel.swift; sourceTree = "<group>"; };
 		81EC69E129D5E85D0004D71D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		81EC69E329D5E8710004D71D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DEDFFA544367E4D41AC2782A /* Pods_Foodzilla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodzilla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +218,8 @@
 		6A2081AB29F65AED0057A95D /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				6A2BAF4E29FEA3340006B336 /* RatedView */,
+				6A2BAF4929FE952D0006B336 /* RatingView */,
 				6A2081AC29F65AFD0057A95D /* PreparationTime */,
 			);
 			path = utils;
@@ -213,6 +241,51 @@
 				6A2081B829F6A2750057A95D /* ChipCollectionViewCell.xib */,
 			);
 			path = Chip;
+			sourceTree = "<group>";
+		};
+		6A2BAF4929FE952D0006B336 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				6A2BAF4A29FE95490006B336 /* RatingView.swift */,
+				6A2BAF4C29FE954D0006B336 /* RatingView.xib */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
+		6A2BAF4E29FEA3340006B336 /* RatedView */ = {
+			isa = PBXGroup;
+			children = (
+				6A2BAF4F29FEA3500006B336 /* RatedView.swift */,
+				6A2BAF5129FEA3680006B336 /* RatedView.xib */,
+			);
+			path = RatedView;
+			sourceTree = "<group>";
+		};
+		6A2BAF5629FEB2120006B336 /* labels */ = {
+			isa = PBXGroup;
+			children = (
+				6A2BAF5729FEB2120006B336 /* IngredientLabel */,
+				6A2BAF5A29FEB2120006B336 /* mainLabel */,
+			);
+			path = labels;
+			sourceTree = "<group>";
+		};
+		6A2BAF5729FEB2120006B336 /* IngredientLabel */ = {
+			isa = PBXGroup;
+			children = (
+				6A2BAF5829FEB2120006B336 /* IngredientLabel.swift */,
+				6A2BAF5929FEB2120006B336 /* IngredientLabel.xib */,
+			);
+			path = IngredientLabel;
+			sourceTree = "<group>";
+		};
+		6A2BAF5A29FEB2120006B336 /* mainLabel */ = {
+			isa = PBXGroup;
+			children = (
+				6A2BAF5B29FEB2120006B336 /* MainLabel.xib */,
+				6A2BAF5C29FEB2120006B336 /* MainLabel.swift */,
+			);
+			path = mainLabel;
 			sourceTree = "<group>";
 		};
 		6A8B165129E7257800DAE5D0 /* RecipeTableViewCell */ = {
@@ -241,12 +314,25 @@
 			path = MainTextField;
 			sourceTree = "<group>";
 		};
+		6AA0A6A529FA87760038EF18 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				81CE7E2029F545FA0078711C /* MainLabel.swift */,
+				81CE7E2229F546040078711C /* MainLabel.xib */,
+				81EB6EB429F9C91E00ECE811 /* IngredientLabel.swift */,
+				6AA0A6B729FA88540038EF18 /* MainLabel.swift */,
+				6AA0A6B629FA88540038EF18 /* MainLabel.xib */,
+				81EB6EB229F9C91300ECE811 /* IngredientLabel.xib */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		6AADB8C229D3793000A5FC44 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				6A2BAF5629FEB2120006B336 /* labels */,
 				6A2081AB29F65AED0057A95D /* utils */,
 				81611DCB29FAD59D00DCF8FA /* OpinionCard */,
-				81CE7E1E29F5459A0078711C /* labels */,
 				6A8B165829E72DA100DAE5D0 /* textFields */,
 				6AADB8C329D3793600A5FC44 /* buttons */,
 			);
@@ -287,6 +373,7 @@
 				6AD049ED29C232D500B60848 /* Products */,
 				03BBDABEA3E923058E4D42E0 /* Pods */,
 				106D81C65B5476E8F3FC7907 /* Frameworks */,
+				6AA0A6A529FA87760038EF18 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -322,6 +409,7 @@
 				6A2081A629F65A460057A95D /* Filters */,
 				817F392229FACEC400C182B6 /* Opinions */,
 				81CE7E1129F534390078711C /* UserPanel */,
+				81CDE5ED29F71BA600C5CA79 /* Recipe */,
 				813E15F329F1DCB000F4C492 /* Search */,
 				81A4125329DE04990005AC33 /* Home */,
 				81EC69E029D5E8460004D71D /* Register */,
@@ -467,6 +555,25 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		81CDE5ED29F71BA600C5CA79 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				81CDE5F229F71C0200C5CA79 /* NutritionSheet */,
+				81CDE5EE29F71BBB00C5CA79 /* Recipe.storyboard */,
+				81CDE5F029F71BCD00C5CA79 /* RecipeViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		81CDE5F229F71C0200C5CA79 /* NutritionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				81CDE5F729F7220700C5CA79 /* NutritionSheetViewController.swift */,
+				6AA0A69A29F902F50038EF18 /* NutritionSheet.storyboard */,
+			);
+			path = NutritionSheet;
+			sourceTree = "<group>";
+		};
 		81CE7E1129F534390078711C /* UserPanel */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,23 +582,6 @@
 				8197350929F59688009FCFD0 /* UserPanelViewModel.swift */,
 			);
 			path = UserPanel;
-			sourceTree = "<group>";
-		};
-		81CE7E1E29F5459A0078711C /* labels */ = {
-			isa = PBXGroup;
-			children = (
-				81CE7E1F29F545A50078711C /* mainLabel */,
-			);
-			path = labels;
-			sourceTree = "<group>";
-		};
-		81CE7E1F29F545A50078711C /* mainLabel */ = {
-			isa = PBXGroup;
-			children = (
-				81CE7E2029F545FA0078711C /* MainLabel.swift */,
-				81CE7E2229F546040078711C /* MainLabel.xib */,
-			);
-			path = mainLabel;
 			sourceTree = "<group>";
 		};
 		81EC69E029D5E8460004D71D /* Register */ = {
@@ -564,6 +654,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CDE5EF29F71BBB00C5CA79 /* Recipe.storyboard in Resources */,
 				6A8B165D29E72DBC00DAE5D0 /* MainTextField.xib in Resources */,
 				6AFDB20329D370A500AC60EF /* SF-Pro-Text-Regular.otf in Resources */,
 				8187AC6929F1E84E00AA0904 /* RecipeTagFilter.xib in Resources */,
@@ -575,7 +666,6 @@
 				81EC69E229D5E85D0004D71D /* Register.storyboard in Resources */,
 				6AFDB20929D370A500AC60EF /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				817F392429FACEDF00C182B6 /* Opinions.storyboard in Resources */,
-				81CE7E2329F546040078711C /* MainLabel.xib in Resources */,
 				6AFDB20D29D370A500AC60EF /* SF-Pro-Text-Medium.otf in Resources */,
 				6AFDB20729D370A500AC60EF /* SF-Pro-Text-ThinItalic.otf in Resources */,
 				6AFDB20A29D370A500AC60EF /* SF-Pro-Text-Semibold.otf in Resources */,
@@ -584,6 +674,7 @@
 				6AFDB1FE29D370A500AC60EF /* SF-Pro-Text-Heavy.otf in Resources */,
 				6A2081AA29F65A5F0057A95D /* Filters.storyboard in Resources */,
 				6AFDB1E629D36B3000AC60EF /* Colors.xcassets in Resources */,
+				6A2BAF5E29FEB2120006B336 /* IngredientLabel.xib in Resources */,
 				6AFDB20B29D370A500AC60EF /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				6A2081BA29F6A2750057A95D /* ChipCollectionViewCell.xib in Resources */,
 				6AFDB20C29D370A500AC60EF /* SF-Pro-Text-LightItalic.otf in Resources */,
@@ -595,10 +686,14 @@
 				6AD049F929C232D600B60848 /* Assets.xcassets in Resources */,
 				813E15F529F1DCC900F4C492 /* Search.storyboard in Resources */,
 				6A2081B129F65B230057A95D /* PreparationTime.xib in Resources */,
+				6AA0A69B29F902F50038EF18 /* NutritionSheet.storyboard in Resources */,
+				6A2BAF4D29FE954D0006B336 /* RatingView.xib in Resources */,
 				6AD049F729C232D500B60848 /* Main.storyboard in Resources */,
 				6AFDB20629D370A500AC60EF /* SF-Pro-Text-Thin.otf in Resources */,
 				81CE7E1329F534490078711C /* UserPanel.storyboard in Resources */,
 				81611DCD29FAD5C700DCF8FA /* OpinionCard.xib in Resources */,
+				6A2BAF5229FEA3680006B336 /* RatedView.xib in Resources */,
+				6A2BAF5F29FEB2120006B336 /* MainLabel.xib in Resources */,
 				6AADB8C729D37A8200A5FC44 /* LandingButton.xib in Resources */,
 				6AFDB20829D370A500AC60EF /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				6AFDB20229D370A500AC60EF /* SF-Pro-Text-Black.otf in Resources */,
@@ -672,9 +767,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CDE5F129F71BCD00C5CA79 /* RecipeViewController.swift in Sources */,
+				81CDE5F829F7220700C5CA79 /* NutritionSheetViewController.swift in Sources */,
 				813E15F729F1DCDD00F4C492 /* SearchViewController.swift in Sources */,
 				817F392629FACEEC00C182B6 /* OpinionsViewController.swift in Sources */,
 				81EC69E429D5E8710004D71D /* RegisterViewController.swift in Sources */,
+				6A2BAF5D29FEB2120006B336 /* IngredientLabel.swift in Sources */,
 				6AD049F429C232D500B60848 /* ViewController.swift in Sources */,
 				6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */,
 				81611DD429FAF85A00DCF8FA /* AddOpinionViewController.swift in Sources */,
@@ -689,7 +787,9 @@
 				6A8B165729E7273900DAE5D0 /* HomeViewModel.swift in Sources */,
 				8187AC6B29F1E87B00AA0904 /* RecipeTagFilter.swift in Sources */,
 				813E15FC29F1DEAB00F4C492 /* DarkButton.swift in Sources */,
+				6A2BAF5029FEA3500006B336 /* RatedView.swift in Sources */,
 				6AADB8D029D37CC800A5FC44 /* LoginViewController.swift in Sources */,
+				6A2BAF6029FEB2120006B336 /* MainLabel.swift in Sources */,
 				6AD049F029C232D500B60848 /* AppDelegate.swift in Sources */,
 				6AFDB21529D3717E00AC60EF /* Fonts.swift in Sources */,
 				6A8B165F29E7302C00DAE5D0 /* BaseView.swift in Sources */,
@@ -697,8 +797,8 @@
 				8197350A29F59688009FCFD0 /* UserPanelViewModel.swift in Sources */,
 				6AD049F229C232D500B60848 /* SceneDelegate.swift in Sources */,
 				6A8B165B29E72DB900DAE5D0 /* MainTextField.swift in Sources */,
-				81CE7E2129F545FA0078711C /* MainLabel.swift in Sources */,
 				6A2081A829F65A580057A95D /* FiltersViewController.swift in Sources */,
+				6A2BAF4B29FE95490006B336 /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
