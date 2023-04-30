@@ -7,6 +7,7 @@ target 'Foodzilla' do
   pod 'Kingfisher'
   pod 'Apollo'
   pod 'MaterialComponents/Chips'
+  pod 'IQKeyboardManagerSwift'
 end
 
 post_install do |installer|

@@ -2,6 +2,7 @@ PODS:
   - Apollo (1.0.7):
     - Apollo/Core (= 1.0.7)
   - Apollo/Core (1.0.7)
+  - IQKeyboardManagerSwift (6.5.11)
   - Kingfisher (7.6.2)
   - MaterialComponents/AnimationTiming (124.2.0)
   - MaterialComponents/Availability (124.2.0)
@@ -79,6 +80,7 @@ PODS:
 
 DEPENDENCIES:
   - Apollo
+  - IQKeyboardManagerSwift
   - Kingfisher
   - MaterialComponents/Chips
   - SnapKit
@@ -87,6 +89,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Apollo
+    - IQKeyboardManagerSwift
     - Kingfisher
     - MaterialComponents
     - MDFInternationalization
@@ -96,6 +99,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Apollo: 4db36a7f08ded7a9f73a72eb90457d98dc4c68f9
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
@@ -103,6 +107,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
 
-PODFILE CHECKSUM: 22740c0caec3adc672b162e92a8cc2dc64198502
+PODFILE CHECKSUM: 81d7b9b2e9c8bb36abd7e9e77dcee8ceaa3f4027
 
 COCOAPODS: 1.12.0
