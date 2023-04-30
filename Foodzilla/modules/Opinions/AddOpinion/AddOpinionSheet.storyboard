@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AddOpinionSheet-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="AddOpinionSheet" storyboardIdentifier="AddOpinionSheet" title="AddOpinionSheet" id="Y6W-OH-hqX" customClass="AddOpinionViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmG-MY-jDE">
+                                <rect key="frame" x="50" y="79" width="293" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1D-hU-aVB">
+                                <rect key="frame" x="75" y="123" width="243" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcC-jZ-fDL">
+                                        <rect key="frame" x="101.66666666666666" y="9.666666666666659" width="40" height="20.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KRl-cC-QKR"/>
+                                    <constraint firstItem="rcC-jZ-fDL" firstAttribute="centerY" secondItem="s1D-hU-aVB" secondAttribute="centerY" id="Nad-hc-Kgz"/>
+                                    <constraint firstItem="rcC-jZ-fDL" firstAttribute="centerX" secondItem="s1D-hU-aVB" secondAttribute="centerX" id="V15-nT-JRF"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write your opinion description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQF-cJ-m2F">
+                                <rect key="frame" x="50" y="203" width="293" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xym-rF-3pn">
+                                <rect key="frame" x="50" y="241" width="293" height="183"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHM-5K-x5A" customClass="LandingButton" customModule="Foodzilla" customModuleProvider="target">
+                                <rect key="frame" x="50" y="467" width="293" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="0Ie-b8-8Vb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="submitOpinionAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PI3-p1-v9M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GmG-MY-jDE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="1Mm-Mv-wpc"/>
+                            <constraint firstItem="xym-rF-3pn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="3Bo-JQ-bHG"/>
+                            <constraint firstItem="EHM-5K-x5A" firstAttribute="top" secondItem="xym-rF-3pn" secondAttribute="bottom" constant="40" id="C1h-uK-BWd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="s1D-hU-aVB" secondAttribute="trailing" constant="75" id="DQB-Ob-eTN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="EHM-5K-x5A" secondAttribute="bottom" constant="339" id="Kkf-V6-ucP"/>
+                            <constraint firstItem="EHM-5K-x5A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="Rgl-dv-1qG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xym-rF-3pn" secondAttribute="trailing" constant="50" id="SRq-rE-DKb"/>
+                            <constraint firstItem="s1D-hU-aVB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="UFm-t2-TDw"/>
+                            <constraint firstItem="GmG-MY-jDE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="W4M-8M-Ddn"/>
+                            <constraint firstItem="dQF-cJ-m2F" firstAttribute="top" secondItem="s1D-hU-aVB" secondAttribute="bottom" constant="40" id="WWl-6i-KOC"/>
+                            <constraint firstItem="s1D-hU-aVB" firstAttribute="top" secondItem="GmG-MY-jDE" secondAttribute="bottom" constant="20" id="cA8-Np-T0m"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EHM-5K-x5A" secondAttribute="trailing" constant="50" id="ddy-Yl-lhr"/>
+                            <constraint firstAttribute="trailing" secondItem="dQF-cJ-m2F" secondAttribute="trailing" constant="50" id="fDZ-ea-1ax"/>
+                            <constraint firstItem="dQF-cJ-m2F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="p1U-J3-1t4"/>
+                            <constraint firstItem="xym-rF-3pn" firstAttribute="top" secondItem="dQF-cJ-m2F" secondAttribute="bottom" constant="20" id="rv1-7v-tek"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GmG-MY-jDE" secondAttribute="trailing" constant="50" id="wn6-o8-llt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="xym-rF-3pn" id="DK7-u2-Hm1"/>
+                        <outlet property="starUIView" destination="s1D-hU-aVB" id="hf4-KU-SIv"/>
+                        <outlet property="submitButton" destination="EHM-5K-x5A" id="3XC-DG-8Iu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51.145038167938928" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
