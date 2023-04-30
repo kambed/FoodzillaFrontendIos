@@ -28,7 +28,7 @@ class RecipeViewController: UIViewController {
 
     @IBOutlet weak var ingredientsStackView: UIStackView!
 
-    @IBOutlet weak var starUIView: UIView!
+    @IBOutlet weak var starUIView: RatedView!
     @IBOutlet weak var stepsStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,11 +73,14 @@ class RecipeViewController: UIViewController {
             label.text = "\(index + 1). \(step)"
             stepsStackView.addArrangedSubview(label)
 
-            let starView = StarView(frame: CGRect(x: 0, y: 0, width: 50, height: 20))
-            starView.rating = 4
-            starView.backgroundColor = .clear
-            starUIView.addSubview(starView)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        starUIView.startupAnimation()
+        starUIView.rating = 1.5
     }
 
     @IBAction func showNutrition(_ sender: Any) {

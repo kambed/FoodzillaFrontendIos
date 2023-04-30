@@ -15,10 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
 
         let vc = UIStoryboard(name: "Recipe", bundle: nil).instantiateViewController(withIdentifier: "Recipe")
-//        let navVC = UINavigationController(rootViewController: RecipeViewController())
-
         window?.rootViewController = vc
-//        window?.rootViewController = navVC
 
         window?.makeKeyAndVisible()
     }
