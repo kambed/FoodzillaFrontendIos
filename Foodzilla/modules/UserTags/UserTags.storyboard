@@ -30,8 +30,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-fe-0a1">
-                                <rect key="frame" x="0.0" y="146" width="390" height="56"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search tags" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-fe-0a1">
+                                <rect key="frame" x="0.0" y="145.66666666666666" width="390" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="h3t-bn-2me"/>
@@ -61,7 +61,7 @@
                                 <rect key="frame" x="0.0" y="610" width="390" height="200"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7BP-EI-rrS">
-                                        <rect key="frame" x="0.0" y="37" width="390" height="163"/>
+                                        <rect key="frame" x="16" y="37" width="358" height="163"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bau-dj-Cag">
                                             <size key="itemSize" width="128" height="128"/>
@@ -81,7 +81,7 @@
                                         </cells>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZQ-bd-qZv">
-                                        <rect key="frame" x="8" y="8" width="374" height="21"/>
+                                        <rect key="frame" x="16" y="8" width="358" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -90,13 +90,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="7BP-EI-rrS" firstAttribute="top" secondItem="IZQ-bd-qZv" secondAttribute="bottom" constant="8" id="99s-cG-Rps"/>
-                                    <constraint firstAttribute="trailing" secondItem="7BP-EI-rrS" secondAttribute="trailing" id="JgC-mr-pLl"/>
+                                    <constraint firstAttribute="trailing" secondItem="7BP-EI-rrS" secondAttribute="trailing" constant="16" id="JgC-mr-pLl"/>
                                     <constraint firstAttribute="bottom" secondItem="7BP-EI-rrS" secondAttribute="bottom" id="N4p-9k-9WH"/>
-                                    <constraint firstItem="IZQ-bd-qZv" firstAttribute="leading" secondItem="0aq-Ou-bNl" secondAttribute="leading" constant="8" id="XXt-DQ-xBX"/>
+                                    <constraint firstItem="IZQ-bd-qZv" firstAttribute="leading" secondItem="0aq-Ou-bNl" secondAttribute="leading" constant="16" id="XXt-DQ-xBX"/>
                                     <constraint firstItem="IZQ-bd-qZv" firstAttribute="top" secondItem="0aq-Ou-bNl" secondAttribute="top" constant="8" id="dJD-Jd-cMD"/>
-                                    <constraint firstItem="7BP-EI-rrS" firstAttribute="leading" secondItem="0aq-Ou-bNl" secondAttribute="leading" id="dPQ-8S-ffo"/>
+                                    <constraint firstItem="7BP-EI-rrS" firstAttribute="leading" secondItem="0aq-Ou-bNl" secondAttribute="leading" constant="16" id="dPQ-8S-ffo"/>
                                     <constraint firstAttribute="height" constant="200" id="rol-2K-AUp"/>
-                                    <constraint firstAttribute="trailing" secondItem="IZQ-bd-qZv" secondAttribute="trailing" constant="8" id="sFb-iy-xzp"/>
+                                    <constraint firstAttribute="trailing" secondItem="IZQ-bd-qZv" secondAttribute="trailing" constant="16" id="sFb-iy-xzp"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -121,6 +121,14 @@
                             <constraint firstItem="Ki7-qJ-ebQ" firstAttribute="top" secondItem="YOL-j0-ixO" secondAttribute="bottom" constant="16" id="web-Yi-n5T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allTagsCollectionView" destination="yyV-ya-nEk" id="lMr-yH-fFF"/>
+                        <outlet property="chosenTagsCollectionView" destination="7BP-EI-rrS" id="edt-YC-hsy"/>
+                        <outlet property="chosenTagsLabel" destination="IZQ-bd-qZv" id="WL3-zs-GCF"/>
+                        <outlet property="descriptionLabel" destination="Ki7-qJ-ebQ" id="PmL-Ul-MLU"/>
+                        <outlet property="searchBar" destination="eGt-fe-0a1" id="GIY-Gi-nKB"/>
+                        <outlet property="titleLabel" destination="YOL-j0-ixO" id="blM-eY-vUI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

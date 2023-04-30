@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        let vc = UIStoryboard(name: "Opinions", bundle: nil).instantiateViewController(withIdentifier: "Opinions")
+        let vc = UIStoryboard(name: "UserTags", bundle: nil).instantiateViewController(withIdentifier: "UserTags")
         window?.rootViewController = vc
 
         window?.makeKeyAndVisible()
