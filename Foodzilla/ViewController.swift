@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var getStartedButton: LandingButton!
 
+    @IBOutlet weak var getStartedButton: LandingButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
