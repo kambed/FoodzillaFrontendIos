@@ -28,8 +28,19 @@ class RecipeViewController: UIViewController {
 
     @IBOutlet weak var ingredientsStackView: UIStackView!
 
+    @IBOutlet weak var recipeTagsCollectionView: UICollectionView!
     @IBOutlet weak var starUIView: RatedView!
     @IBOutlet weak var stepsStackView: UIStackView!
+    
+    let recipeTagsData = [
+        "week-night",
+        "occasion",
+        "healthy",
+        "cuisine"
+    ]
+    
+    var recipeTagsCV: RecipeTagsCV!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -74,6 +85,14 @@ class RecipeViewController: UIViewController {
             stepsStackView.addArrangedSubview(label)
 
         }
+        
+        
+        
+        recipeTagsCV = RecipeTagsCV(data: recipeTagsData)
+        
+        recipeTagsCollectionView.register(ChipCollectionViewCell.self, forCellWithReuseIdentifier: "ChipCollectionViewCell")
+        recipeTagsCollectionView.delegate = recipeTagsCV
+        recipeTagsCollectionView.dataSource = recipeTagsCV
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -92,4 +111,25 @@ class RecipeViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
+}
+
+class RecipeTagsCV: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let data: [String]
+    
+    init(data: [String]) {
+        self.data = data
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.data.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChipCollectionViewCell", for: indexPath) as! ChipCollectionViewCell
+        let chipView = cell.chipView
+        
+        chipView.titleLabel.text = data[indexPath.item]
+        return cell
+    }
 }
