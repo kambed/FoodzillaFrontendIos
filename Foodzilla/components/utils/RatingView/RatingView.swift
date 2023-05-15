@@ -75,7 +75,7 @@ class RatingView: BaseView {
             
             UIView.transition(with: starButtons[i], duration: 0.2, options: .transitionCrossDissolve, animations: { [weak self] in
                 guard let self else { return }
-                starButtons[i].setImage(image, for: .normal)
+                self.starButtons[i].setImage(image, for: .normal)
             }, completion: nil)
         }
         
