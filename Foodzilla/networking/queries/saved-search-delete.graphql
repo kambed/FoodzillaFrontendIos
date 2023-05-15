@@ -1,0 +1,14 @@
+mutation deleteSavedSearch($id: Int) {
+    deleteSavedSearch(id: $id) {
+        id
+        phrase
+        filters {
+            attribute
+            equals
+        }
+        sort {
+            attribute
+            direction
+        }
+    }
+}

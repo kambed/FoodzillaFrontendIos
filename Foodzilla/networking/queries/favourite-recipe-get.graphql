@@ -1,0 +1,7 @@
+query favouriteRecipes {
+    favouriteRecipes {
+        id
+        name
+        timeOfPreparation
+    }
+}

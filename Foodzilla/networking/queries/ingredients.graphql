@@ -1,0 +1,6 @@
+query ingredients {
+    ingredients {
+        id
+        name
+    }
+}
