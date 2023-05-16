@@ -61,11 +61,8 @@ class ApolloGraphQLClient {
             }
         }
     }
-
     
-    public func getTags() async throws -> FoodzillaGraphQL.TagsQuery.Data {
-        return try await performQuery(operation: FoodzillaGraphQL.TagsQuery())
-    }
+    // MARK: User
     
     public func createUser(user: User) async throws -> FoodzillaGraphQL.CreateMutation.Data {
         guard let firstName = user.firstName, let lastName = user.lastName, let username = user.username, let password = user.password else {
@@ -83,6 +80,13 @@ class ApolloGraphQLClient {
         
         let mutation = FoodzillaGraphQL.LoginMutation(username: username, password: password)
         return try await performMutation(operation: mutation)
+    }
+    
+    
+    // MARK: Tags
+    
+    public func getTags() async throws -> FoodzillaGraphQL.TagsQuery.Data {
+        return try await performQuery(operation: FoodzillaGraphQL.TagsQuery())
     }
 }
 

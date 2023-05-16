@@ -45,18 +45,5 @@ final class OpinionsViewController: UIViewController {
         opinionCard2.opinionDescription.text = "This is fantastic!!!!!!! Thank you. Will be a falimy favourite. A bit messy to prepare but worth it."
 
         addOpinionButton.title = "Add opinion"
-        
-        Task {
-            do {
-                let user = try await ApolloGraphQLClient.shared.createUser(user: User(firstName: "fstname", lastName: "lastname", username: "username", password: "Password123!"))
-                
-                let login = try await ApolloGraphQLClient.shared.loginUser(user: User(firstName: "fstname", lastName: "lastname", username: "username", password: "Password123!"))
-                
-                print(user)
-                print(login)
-            } catch let err {
-                print(err)
-            }
-        }
     }
 }

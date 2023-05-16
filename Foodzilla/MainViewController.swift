@@ -8,7 +8,7 @@
 import SnapKit
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController, Storyboarded {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -31,5 +31,12 @@ class ViewController: UIViewController {
 
         getStartedButton.title = "Get started"
         getStartedButton.configuration?.image = UIImage(systemName: "paperplane.fill")
+    }
+    
+    @IBAction func getStartedButtonTapped(_ sender: Any) {
+        if let delegate = UIApplication.shared.sceneDelegate {
+            let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login")
+            delegate.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
