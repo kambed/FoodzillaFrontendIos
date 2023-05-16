@@ -83,7 +83,8 @@
 		6A2BB0A02A1214910006B336 /* FilterType.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB07E2A1214910006B336 /* FilterType.graphql.swift */; };
 		6A2BB0A12A1214910006B336 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB07F2A1214910006B336 /* SchemaMetadata.graphql.swift */; };
 		6A2BB0A32A12155A0006B336 /* ApolloGraphQLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0A22A12155A0006B336 /* ApolloGraphQLClient.swift */; };
-		6A2BB0A62A1216FA0006B336 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0A52A1216FA0006B336 /* GraphQLError.swift */; };
+		6A2BB0A62A1216FA0006B336 /* GraphQLErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0A52A1216FA0006B336 /* GraphQLErrors.swift */; };
+		6A2BB0B02A13BEE50006B336 /* UserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0AF2A13BEE50006B336 /* UserErrors.swift */; };
 		6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165229E7259C00DAE5D0 /* RecipeTableViewCell.swift */; };
 		6A8B165529E725A000DAE5D0 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B165429E725A000DAE5D0 /* RecipeTableViewCell.xib */; };
 		6A8B165729E7273900DAE5D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165629E7273900DAE5D0 /* HomeViewModel.swift */; };
@@ -227,7 +228,8 @@
 		6A2BB07E2A1214910006B336 /* FilterType.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterType.graphql.swift; sourceTree = "<group>"; };
 		6A2BB07F2A1214910006B336 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
 		6A2BB0A22A12155A0006B336 /* ApolloGraphQLClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloGraphQLClient.swift; sourceTree = "<group>"; };
-		6A2BB0A52A1216FA0006B336 /* GraphQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLError.swift; sourceTree = "<group>"; };
+		6A2BB0A52A1216FA0006B336 /* GraphQLErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLErrors.swift; sourceTree = "<group>"; };
+		6A2BB0AF2A13BEE50006B336 /* UserErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserErrors.swift; sourceTree = "<group>"; };
 		6A8B165229E7259C00DAE5D0 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		6A8B165429E725A000DAE5D0 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		6A8B165629E7273900DAE5D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -566,7 +568,8 @@
 		6A2BB0A42A1216ED0006B336 /* errors */ = {
 			isa = PBXGroup;
 			children = (
-				6A2BB0A52A1216FA0006B336 /* GraphQLError.swift */,
+				6A2BB0A52A1216FA0006B336 /* GraphQLErrors.swift */,
+				6A2BB0AF2A13BEE50006B336 /* UserErrors.swift */,
 			);
 			path = errors;
 			sourceTree = "<group>";
@@ -1104,6 +1107,7 @@
 				6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */,
 				81611DD429FAF85A00DCF8FA /* AddOpinionViewController.swift in Sources */,
 				6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */,
+				6A2BB0B02A13BEE50006B336 /* UserErrors.swift in Sources */,
 				6A2BB0902A1214910006B336 /* TagsQuery.graphql.swift in Sources */,
 				6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */,
 				81CE7E1529F534590078711C /* UserPanelViewController.swift in Sources */,
@@ -1113,7 +1117,7 @@
 				6A2BB09F2A1214910006B336 /* SchemaConfiguration.swift in Sources */,
 				6A2BB0802A1214910006B336 /* FoodzillaGraphQL.graphql.swift in Sources */,
 				6A2081AF29F65B1A0057A95D /* PreparationTime.swift in Sources */,
-				6A2BB0A62A1216FA0006B336 /* GraphQLError.swift in Sources */,
+				6A2BB0A62A1216FA0006B336 /* GraphQLErrors.swift in Sources */,
 				6A2BB0812A1214910006B336 /* AddSavedSearchMutation.graphql.swift in Sources */,
 				6A2BB08B2A1214910006B336 /* SearchQuery.graphql.swift in Sources */,
 				6A2081B929F6A2750057A95D /* ChipCollectionViewCell.swift in Sources */,
