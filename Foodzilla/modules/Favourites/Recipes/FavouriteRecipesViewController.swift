@@ -10,6 +10,13 @@ import UIKit
 class FavouriteRecipesViewController: UIViewController {
     
     
+    @IBAction func redirectToSearches(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "FavouriteSearchesViewController", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "FavouriteSearchesViewController")
+        
+        present(vc, animated: true, completion: nil)
+    }
     @IBOutlet weak var checkSearchesButton: LandingButton!
     
     @IBOutlet weak var recentCollectionView: UICollectionView!

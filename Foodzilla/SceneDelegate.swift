@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
 
-        let vc = UIStoryboard(name: "FavouriteRecipes", bundle: nil).instantiateViewController(withIdentifier: "FavouriteRecipes")
+        let vc = UIStoryboard(name: "FavouriteRecipesViewController", bundle: nil).instantiateViewController(withIdentifier: "FavouriteRecipesViewController")
         window?.rootViewController = vc
 
         window?.makeKeyAndVisible()

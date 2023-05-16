@@ -14,7 +14,7 @@
         <!--Favourite Recipes View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="FavouriteRecipes" id="Y6W-OH-hqX" customClass="FavouriteRecipesViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavouriteRecipesViewController" id="Y6W-OH-hqX" customClass="FavouriteRecipesViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                                 <rect key="frame" x="24" y="106" width="346" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="redirectToSearches:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YAh-IB-xIx"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="Search favourite recipes" translatesAutoresizingMaskIntoConstraints="NO" id="OXr-0c-7Yb">
                                 <rect key="frame" x="24" y="156" width="346" height="56"/>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favourite Searches View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FavouriteSearchesViewController" id="Y6W-OH-hqX" customClass="FavouriteSearchesViewController" customModule="Foodzilla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzE-he-mzD">
+                                <rect key="frame" x="24" y="89" width="40" height="35"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                            </button>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="lIz-5m-7TH">
+                                <rect key="frame" x="86" y="79" width="283" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="eNM-BY-Q2R"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC0-Kp-y06">
+                                <rect key="frame" x="24" y="155" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4k7-Mf-ObI">
+                                <rect key="frame" x="24" y="196" width="345" height="340"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jAV-Wv-gxp">
+                                    <size key="itemSize" width="53" height="56"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="WEJ-Aa-L1m" customClass="ChipCollectionViewCell" customModule="Foodzilla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8gx-SB-ncZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="44" height="44"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CC0-Kp-y06" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Ccn-n5-h8R"/>
+                            <constraint firstItem="lIz-5m-7TH" firstAttribute="leading" secondItem="yzE-he-mzD" secondAttribute="trailing" constant="22" id="Du1-L9-DAK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4k7-Mf-ObI" secondAttribute="trailing" constant="24" id="GFz-L2-pJY"/>
+                            <constraint firstItem="CC0-Kp-y06" firstAttribute="top" secondItem="lIz-5m-7TH" secondAttribute="bottom" constant="20" id="HTl-EU-Btd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CC0-Kp-y06" secondAttribute="trailing" constant="228" id="Nkg-B0-Lvw"/>
+                            <constraint firstItem="4k7-Mf-ObI" firstAttribute="top" secondItem="CC0-Kp-y06" secondAttribute="bottom" constant="20" id="UlV-0m-MX3"/>
+                            <constraint firstItem="CC0-Kp-y06" firstAttribute="top" secondItem="yzE-he-mzD" secondAttribute="bottom" constant="31" id="bJY-oL-HbP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lIz-5m-7TH" secondAttribute="trailing" constant="24" id="jn9-Mu-2LD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="4k7-Mf-ObI" secondAttribute="bottom" constant="282" id="lKO-Lv-3fs"/>
+                            <constraint firstItem="4k7-Mf-ObI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="lZE-bh-fO1"/>
+                            <constraint firstItem="lIz-5m-7TH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="rm6-3e-5WZ"/>
+                            <constraint firstItem="yzE-he-mzD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="sIj-HU-uVP"/>
+                            <constraint firstItem="yzE-he-mzD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="zNR-YY-lHl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recentSearchesCollectionView" destination="4k7-Mf-ObI" id="zhx-vw-je1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

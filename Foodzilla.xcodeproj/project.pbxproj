@@ -71,9 +71,9 @@
 		81611DCF29FAD5D000DCF8FA /* OpinionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81611DCE29FAD5D000DCF8FA /* OpinionCard.swift */; };
 		81611DD229FAF84D00DCF8FA /* AddOpinionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81611DD129FAF84D00DCF8FA /* AddOpinionSheet.storyboard */; };
 		81611DD429FAF85A00DCF8FA /* AddOpinionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */; };
-		817D4DD82A12AF1000656979 /* FavouriteRecipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817D4DD72A12AF1000656979 /* FavouriteRecipes.storyboard */; };
+		817D4DD82A12AF1000656979 /* FavouriteRecipesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817D4DD72A12AF1000656979 /* FavouriteRecipesViewController.storyboard */; };
 		817D4DDA2A12AF2600656979 /* FavouriteRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D4DD92A12AF2600656979 /* FavouriteRecipesViewController.swift */; };
-		817D4DDC2A12B16200656979 /* FavouriteSearches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817D4DDB2A12B16200656979 /* FavouriteSearches.storyboard */; };
+		817D4DDC2A12B16200656979 /* FavouriteSearchesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817D4DDB2A12B16200656979 /* FavouriteSearchesViewController.storyboard */; };
 		817D4DDE2A12B17600656979 /* FavouriteSearchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D4DDD2A12B17600656979 /* FavouriteSearchesViewController.swift */; };
 		817F392429FACEDF00C182B6 /* Opinions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817F392329FACEDF00C182B6 /* Opinions.storyboard */; };
 		817F392629FACEEC00C182B6 /* OpinionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F392529FACEEC00C182B6 /* OpinionsViewController.swift */; };
@@ -163,9 +163,9 @@
 		81611DCE29FAD5D000DCF8FA /* OpinionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionCard.swift; sourceTree = "<group>"; };
 		81611DD129FAF84D00DCF8FA /* AddOpinionSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOpinionSheet.storyboard; sourceTree = "<group>"; };
 		81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOpinionViewController.swift; sourceTree = "<group>"; };
-		817D4DD72A12AF1000656979 /* FavouriteRecipes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteRecipes.storyboard; sourceTree = "<group>"; };
+		817D4DD72A12AF1000656979 /* FavouriteRecipesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteRecipesViewController.storyboard; sourceTree = "<group>"; };
 		817D4DD92A12AF2600656979 /* FavouriteRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRecipesViewController.swift; sourceTree = "<group>"; };
-		817D4DDB2A12B16200656979 /* FavouriteSearches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteSearches.storyboard; sourceTree = "<group>"; };
+		817D4DDB2A12B16200656979 /* FavouriteSearchesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteSearchesViewController.storyboard; sourceTree = "<group>"; };
 		817D4DDD2A12B17600656979 /* FavouriteSearchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSearchesViewController.swift; sourceTree = "<group>"; };
 		817F392329FACEDF00C182B6 /* Opinions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Opinions.storyboard; sourceTree = "<group>"; };
 		817F392529FACEEC00C182B6 /* OpinionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionsViewController.swift; sourceTree = "<group>"; };
@@ -563,7 +563,7 @@
 		817D4DD52A12AEE400656979 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				817D4DD72A12AF1000656979 /* FavouriteRecipes.storyboard */,
+				817D4DD72A12AF1000656979 /* FavouriteRecipesViewController.storyboard */,
 				817D4DD92A12AF2600656979 /* FavouriteRecipesViewController.swift */,
 			);
 			path = Recipes;
@@ -572,7 +572,7 @@
 		817D4DD62A12AEEB00656979 /* Searches */ = {
 			isa = PBXGroup;
 			children = (
-				817D4DDB2A12B16200656979 /* FavouriteSearches.storyboard */,
+				817D4DDB2A12B16200656979 /* FavouriteSearchesViewController.storyboard */,
 				817D4DDD2A12B17600656979 /* FavouriteSearchesViewController.swift */,
 			);
 			path = Searches;
@@ -733,7 +733,7 @@
 				6AFDB20C29D370A500AC60EF /* SF-Pro-Text-LightItalic.otf in Resources */,
 				81A4125729DE04DD0005AC33 /* Home.storyboard in Resources */,
 				6AFDB1FD29D370A500AC60EF /* SF-Pro-Text-UltralightItalic.otf in Resources */,
-				817D4DDC2A12B16200656979 /* FavouriteSearches.storyboard in Resources */,
+				817D4DDC2A12B16200656979 /* FavouriteSearchesViewController.storyboard in Resources */,
 				6AFDB20529D370A500AC60EF /* SF-Pro-Text-Bold.otf in Resources */,
 				6AFDB20429D370A500AC60EF /* SF-Pro-Text-Ultralight.otf in Resources */,
 				6AFDB20129D370A500AC60EF /* SF-Pro-Text-BlackItalic.otf in Resources */,
@@ -744,7 +744,7 @@
 				6A2BAF4D29FE954D0006B336 /* RatingView.xib in Resources */,
 				6AD049F729C232D500B60848 /* Main.storyboard in Resources */,
 				6AFDB20629D370A500AC60EF /* SF-Pro-Text-Thin.otf in Resources */,
-				817D4DD82A12AF1000656979 /* FavouriteRecipes.storyboard in Resources */,
+				817D4DD82A12AF1000656979 /* FavouriteRecipesViewController.storyboard in Resources */,
 				81CE7E1329F534490078711C /* UserPanel.storyboard in Resources */,
 				81611DCD29FAD5C700DCF8FA /* OpinionCard.xib in Resources */,
 				6A2BAF5229FEA3680006B336 /* RatedView.xib in Resources */,
