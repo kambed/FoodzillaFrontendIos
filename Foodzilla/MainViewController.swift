@@ -34,9 +34,6 @@ class MainViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func getStartedButtonTapped(_ sender: Any) {
-        if let delegate = UIApplication.shared.sceneDelegate {
-            let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login")
-            delegate.navigationController?.pushViewController(vc, animated: true)
-        }
+        UIApplication.shared.sceneDelegate?.navigationController?.pushViewController(LoginCoordinator.prepare(), animated: true)
     }
 }

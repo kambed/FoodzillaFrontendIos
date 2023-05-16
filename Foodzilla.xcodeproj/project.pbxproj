@@ -88,6 +88,10 @@
 		6A2BB0B32A13C6F80006B336 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0B22A13C6F80006B336 /* UIApplication+Extensions.swift */; };
 		6A2BB0B72A13CA120006B336 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0B62A13CA120006B336 /* LoginViewModel.swift */; };
 		6A2BB0B92A13CA880006B336 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0B82A13CA880006B336 /* Storyboarded.swift */; };
+		6A2BB0BB2A13CECE0006B336 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0BA2A13CECE0006B336 /* Coordinator.swift */; };
+		6A2BB0BD2A13CF6B0006B336 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0BC2A13CF6B0006B336 /* LoginCoordinator.swift */; };
+		6A2BB0BF2A13D0580006B336 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0BE2A13D0580006B336 /* RegisterCoordinator.swift */; };
+		6A2BB0C12A13D0CB0006B336 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BB0C02A13D0CB0006B336 /* RegisterViewModel.swift */; };
 		6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165229E7259C00DAE5D0 /* RecipeTableViewCell.swift */; };
 		6A8B165529E725A000DAE5D0 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B165429E725A000DAE5D0 /* RecipeTableViewCell.xib */; };
 		6A8B165729E7273900DAE5D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B165629E7273900DAE5D0 /* HomeViewModel.swift */; };
@@ -236,6 +240,10 @@
 		6A2BB0B22A13C6F80006B336 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		6A2BB0B62A13CA120006B336 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6A2BB0B82A13CA880006B336 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		6A2BB0BA2A13CECE0006B336 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6A2BB0BC2A13CF6B0006B336 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		6A2BB0BE2A13D0580006B336 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		6A2BB0C02A13D0CB0006B336 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		6A8B165229E7259C00DAE5D0 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		6A8B165429E725A000DAE5D0 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		6A8B165629E7273900DAE5D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -663,6 +671,7 @@
 				6AADB8CD29D37CC000A5FC44 /* LoginViewController.storyboard */,
 				6AADB8CF29D37CC800A5FC44 /* LoginViewController.swift */,
 				6A2BB0B62A13CA120006B336 /* LoginViewModel.swift */,
+				6A2BB0BC2A13CF6B0006B336 /* LoginCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -734,6 +743,7 @@
 			children = (
 				6A8B165E29E7302C00DAE5D0 /* BaseView.swift */,
 				6A2BB0B82A13CA880006B336 /* Storyboarded.swift */,
+				6A2BB0BA2A13CECE0006B336 /* Coordinator.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -894,6 +904,8 @@
 			children = (
 				81EC69E129D5E85D0004D71D /* RegisterViewController.storyboard */,
 				81EC69E329D5E8710004D71D /* RegisterViewController.swift */,
+				6A2BB0BE2A13D0580006B336 /* RegisterCoordinator.swift */,
+				6A2BB0C02A13D0CB0006B336 /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1126,11 +1138,13 @@
 				6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */,
 				81611DD429FAF85A00DCF8FA /* AddOpinionViewController.swift in Sources */,
 				6A8B165329E7259C00DAE5D0 /* RecipeTableViewCell.swift in Sources */,
+				6A2BB0C12A13D0CB0006B336 /* RegisterViewModel.swift in Sources */,
 				6A2BB0B02A13BEE50006B336 /* UserErrors.swift in Sources */,
 				6A2BB0902A1214910006B336 /* TagsQuery.graphql.swift in Sources */,
 				6AADB8C929D37AE800A5FC44 /* LandingButton.swift in Sources */,
 				81CE7E1529F534590078711C /* UserPanelViewController.swift in Sources */,
 				6A2BB0A12A1214910006B336 /* SchemaMetadata.graphql.swift in Sources */,
+				6A2BB0BD2A13CF6B0006B336 /* LoginCoordinator.swift in Sources */,
 				8187AC6F29F1ED3100AA0904 /* SearchViewModel.swift in Sources */,
 				6A2BB09B2A1214910006B336 /* SavedSearchResult.graphql.swift in Sources */,
 				6A2BB0B72A13CA120006B336 /* LoginViewModel.swift in Sources */,
@@ -1142,6 +1156,8 @@
 				6A2BB08B2A1214910006B336 /* SearchQuery.graphql.swift in Sources */,
 				6A2081B929F6A2750057A95D /* ChipCollectionViewCell.swift in Sources */,
 				6A2BB0992A1214910006B336 /* Tag.graphql.swift in Sources */,
+				6A2BB0BF2A13D0580006B336 /* RegisterCoordinator.swift in Sources */,
+				6A2BB0BB2A13CECE0006B336 /* Coordinator.swift in Sources */,
 				6AFDB21329D3717E00AC60EF /* Images.swift in Sources */,
 				6A2BB0852A1214910006B336 /* LoginMutation.graphql.swift in Sources */,
 				81A4125929DE04EC0005AC33 /* HomeViewController.swift in Sources */,
