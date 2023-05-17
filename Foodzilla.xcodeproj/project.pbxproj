@@ -21,6 +21,9 @@
 		6A2BAF5E29FEB2120006B336 /* IngredientLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5929FEB2120006B336 /* IngredientLabel.xib */; };
 		6A2BAF5F29FEB2120006B336 /* MainLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5B29FEB2120006B336 /* MainLabel.xib */; };
 		6A2BAF6029FEB2120006B336 /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BAF5C29FEB2120006B336 /* MainLabel.swift */; };
+		6A2BAF6329FEBA8D0006B336 /* UserTags.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF6229FEBA8D0006B336 /* UserTags.storyboard */; };
+		6A2BAF6529FEBABF0006B336 /* UserTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BAF6429FEBABF0006B336 /* UserTagsViewController.swift */; };
+		6A2BAF6729FEC0800006B336 /* UserTagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2BAF6629FEC0800006B336 /* UserTagsViewModel.swift */; };
 		6A2BAF952A120E9A0006B336 /* recipe.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF8A2A120E9A0006B336 /* recipe.graphqls */; };
 		6A2BAF962A120E9A0006B336 /* recommendation.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF8B2A120E9A0006B336 /* recommendation.graphqls */; };
 		6A2BAF972A120E9A0006B336 /* auth.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 6A2BAF8C2A120E9A0006B336 /* auth.graphqls */; };
@@ -145,6 +148,10 @@
 		81611DCF29FAD5D000DCF8FA /* OpinionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81611DCE29FAD5D000DCF8FA /* OpinionCard.swift */; };
 		81611DD229FAF84D00DCF8FA /* AddOpinionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81611DD129FAF84D00DCF8FA /* AddOpinionViewController.storyboard */; };
 		81611DD429FAF85A00DCF8FA /* AddOpinionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */; };
+		817D4DD82A12AF1000656979 /* FavouriteRecipesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817D4DD72A12AF1000656979 /* FavouriteRecipesViewController.storyboard */; };
+		817D4DDA2A12AF2600656979 /* FavouriteRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D4DD92A12AF2600656979 /* FavouriteRecipesViewController.swift */; };
+		817D4DDC2A12B16200656979 /* FavouriteSearchesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817D4DDB2A12B16200656979 /* FavouriteSearchesViewController.storyboard */; };
+		817D4DDE2A12B17600656979 /* FavouriteSearchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D4DDD2A12B17600656979 /* FavouriteSearchesViewController.swift */; };
 		817F392429FACEDF00C182B6 /* OpinionsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817F392329FACEDF00C182B6 /* OpinionsViewController.storyboard */; };
 		817F392629FACEEC00C182B6 /* OpinionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F392529FACEEC00C182B6 /* OpinionsViewController.swift */; };
 		8187AC6929F1E84E00AA0904 /* RecipeTagFilter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */; };
@@ -179,6 +186,9 @@
 		6A2BAF5929FEB2120006B336 /* IngredientLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientLabel.xib; sourceTree = "<group>"; };
 		6A2BAF5B29FEB2120006B336 /* MainLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainLabel.xib; sourceTree = "<group>"; };
 		6A2BAF5C29FEB2120006B336 /* MainLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
+		6A2BAF6229FEBA8D0006B336 /* UserTags.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserTags.storyboard; sourceTree = "<group>"; };
+		6A2BAF6429FEBABF0006B336 /* UserTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTagsViewController.swift; sourceTree = "<group>"; };
+		6A2BAF6629FEC0800006B336 /* UserTagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTagsViewModel.swift; sourceTree = "<group>"; };
 		6A2BAF8A2A120E9A0006B336 /* recipe.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = recipe.graphqls; sourceTree = "<group>"; };
 		6A2BAF8B2A120E9A0006B336 /* recommendation.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = recommendation.graphqls; sourceTree = "<group>"; };
 		6A2BAF8C2A120E9A0006B336 /* auth.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = auth.graphqls; sourceTree = "<group>"; };
@@ -308,6 +318,10 @@
 		81611DD129FAF84D00DCF8FA /* AddOpinionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOpinionViewController.storyboard; sourceTree = "<group>"; };
 		81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOpinionViewController.swift; sourceTree = "<group>"; };
 		817F392329FACEDF00C182B6 /* OpinionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpinionsViewController.storyboard; sourceTree = "<group>"; };
+		817D4DD72A12AF1000656979 /* FavouriteRecipesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteRecipesViewController.storyboard; sourceTree = "<group>"; };
+		817D4DD92A12AF2600656979 /* FavouriteRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRecipesViewController.swift; sourceTree = "<group>"; };
+		817D4DDB2A12B16200656979 /* FavouriteSearchesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteSearchesViewController.storyboard; sourceTree = "<group>"; };
+		817D4DDD2A12B17600656979 /* FavouriteSearchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSearchesViewController.swift; sourceTree = "<group>"; };
 		817F392529FACEEC00C182B6 /* OpinionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionsViewController.swift; sourceTree = "<group>"; };
 		8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTagFilter.xib; sourceTree = "<group>"; };
 		8187AC6A29F1E87B00AA0904 /* RecipeTagFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTagFilter.swift; sourceTree = "<group>"; };
@@ -440,6 +454,16 @@
 				6A2BAF5C29FEB2120006B336 /* MainLabel.swift */,
 			);
 			path = mainLabel;
+			sourceTree = "<group>";
+		};
+		6A2BAF6129FEBA5E0006B336 /* UserTags */ = {
+			isa = PBXGroup;
+			children = (
+				6A2BAF6229FEBA8D0006B336 /* UserTags.storyboard */,
+				6A2BAF6429FEBABF0006B336 /* UserTagsViewController.swift */,
+				6A2BAF6629FEC0800006B336 /* UserTagsViewModel.swift */,
+			);
+			path = UserTags;
 			sourceTree = "<group>";
 		};
 		6A2BAF882A120E4A0006B336 /* networking */ = {
@@ -741,6 +765,8 @@
 		6AFDB1E129D36A9000AC60EF /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				817D4DD42A12AEA400656979 /* Favourites */,
+				6A2BAF6129FEBA5E0006B336 /* UserTags */,
 				6A2081A629F65A460057A95D /* Filters */,
 				817F392229FACEC400C182B6 /* Opinions */,
 				81CE7E1129F534390078711C /* UserPanel */,
@@ -861,6 +887,33 @@
 				81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */,
 			);
 			path = AddOpinion;
+			sourceTree = "<group>";
+		};
+		817D4DD42A12AEA400656979 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				817D4DD62A12AEEB00656979 /* Searches */,
+				817D4DD52A12AEE400656979 /* Recipes */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		817D4DD52A12AEE400656979 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				817D4DD72A12AF1000656979 /* FavouriteRecipesViewController.storyboard */,
+				817D4DD92A12AF2600656979 /* FavouriteRecipesViewController.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		817D4DD62A12AEEB00656979 /* Searches */ = {
+			isa = PBXGroup;
+			children = (
+				817D4DDB2A12B16200656979 /* FavouriteSearchesViewController.storyboard */,
+				817D4DDD2A12B17600656979 /* FavouriteSearchesViewController.swift */,
+			);
+			path = Searches;
 			sourceTree = "<group>";
 		};
 		817F392229FACEC400C182B6 /* Opinions */ = {
@@ -1039,6 +1092,7 @@
 				6AFDB20C29D370A500AC60EF /* SF-Pro-Text-LightItalic.otf in Resources */,
 				81A4125729DE04DD0005AC33 /* HomeViewController.storyboard in Resources */,
 				6AFDB1FD29D370A500AC60EF /* SF-Pro-Text-UltralightItalic.otf in Resources */,
+				817D4DDC2A12B16200656979 /* FavouriteSearchesViewController.storyboard in Resources */,
 				6AFDB20529D370A500AC60EF /* SF-Pro-Text-Bold.otf in Resources */,
 				6A2BAFBA2A120F270006B336 /* saved-search-create.graphql in Resources */,
 				6AFDB20429D370A500AC60EF /* SF-Pro-Text-Ultralight.otf in Resources */,
@@ -1057,11 +1111,13 @@
 				6A2BAF4D29FE954D0006B336 /* RatingView.xib in Resources */,
 				6AD049F729C232D500B60848 /* MainViewController.storyboard in Resources */,
 				6AFDB20629D370A500AC60EF /* SF-Pro-Text-Thin.otf in Resources */,
+				817D4DD82A12AF1000656979 /* FavouriteRecipesViewController.storyboard in Resources */,
 				81CE7E1329F534490078711C /* UserPanelViewController.storyboard in Resources */,
 				6A2BAF962A120E9A0006B336 /* recommendation.graphqls in Resources */,
 				81611DCD29FAD5C700DCF8FA /* OpinionCard.xib in Resources */,
 				6A2BAF5229FEA3680006B336 /* RatedView.xib in Resources */,
 				6A2BAF5F29FEB2120006B336 /* MainLabel.xib in Resources */,
+				6A2BAF6329FEBA8D0006B336 /* UserTags.storyboard in Resources */,
 				6A2BAF9D2A120E9A0006B336 /* customer.graphqls in Resources */,
 				6AADB8C729D37A8200A5FC44 /* LandingButton.xib in Resources */,
 				6AFDB20829D370A500AC60EF /* SF-Pro-Text-BoldItalic.otf in Resources */,
@@ -1153,6 +1209,8 @@
 				6A2BB09C2A1214910006B336 /* Recipe.graphql.swift in Sources */,
 				6A2BB09A2A1214910006B336 /* SavedSearchSortType.graphql.swift in Sources */,
 				81CDE5F829F7220700C5CA79 /* NutritionSheetViewController.swift in Sources */,
+				6A2BAF6729FEC0800006B336 /* UserTagsViewModel.swift in Sources */,
+				817D4DDA2A12AF2600656979 /* FavouriteRecipesViewController.swift in Sources */,
 				813E15F729F1DCDD00F4C492 /* SearchViewController.swift in Sources */,
 				6A2BB08D2A1214910006B336 /* RecentlyViewedRecipesQuery.graphql.swift in Sources */,
 				6A2BB0952A1214910006B336 /* Mutation.graphql.swift in Sources */,
@@ -1211,6 +1269,8 @@
 				6A2BB08F2A1214910006B336 /* IngredientsQuery.graphql.swift in Sources */,
 				6A2BB0832A1214910006B336 /* CreateMutation.graphql.swift in Sources */,
 				8197350A29F59688009FCFD0 /* UserPanelViewModel.swift in Sources */,
+				817D4DDE2A12B17600656979 /* FavouriteSearchesViewController.swift in Sources */,
+				6A2BAF6529FEBABF0006B336 /* UserTagsViewController.swift in Sources */,
 				6AD049F229C232D500B60848 /* SceneDelegate.swift in Sources */,
 				6A2BB09E2A1214910006B336 /* Token.graphql.swift in Sources */,
 				6A2BB0822A1214910006B336 /* EditMutation.graphql.swift in Sources */,

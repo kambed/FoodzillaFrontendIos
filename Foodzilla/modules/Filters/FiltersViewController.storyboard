@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-ht-FIC">
-                                <rect key="frame" x="100" y="56.999999999999993" width="190" height="28.666666666666664"/>
+                                <rect key="frame" x="12" y="56.999999999999993" width="366" height="28.666666666666664"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naR-P5-LtC">
-                                <rect key="frame" x="13" y="54" width="0.0" height="34.666666666666657"/>
+                                <rect key="frame" x="12.999999999999996" y="54" width="39.666666666666657" height="34.666666666666657"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
@@ -126,8 +126,7 @@
                             <constraint firstItem="7rr-L7-mAl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="EPv-Bp-LzL"/>
                             <constraint firstItem="h1W-9V-KeE" firstAttribute="top" secondItem="LWu-Cg-ac5" secondAttribute="bottom" constant="20" id="HQN-OB-CBh"/>
                             <constraint firstItem="lna-15-kyy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="I3w-zA-zqa"/>
-                            <constraint firstItem="5nn-ht-FIC" firstAttribute="leading" secondItem="naR-P5-LtC" secondAttribute="trailing" constant="87" id="IpS-5H-Y4k"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5nn-ht-FIC" secondAttribute="trailing" constant="100" id="NQX-7W-2kK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5nn-ht-FIC" secondAttribute="trailing" constant="12" id="NQX-7W-2kK"/>
                             <constraint firstItem="h1W-9V-KeE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ra8-zG-UAM"/>
                             <constraint firstItem="lna-15-kyy" firstAttribute="top" secondItem="5nn-ht-FIC" secondAttribute="bottom" constant="16" id="Xpm-RC-umy"/>
                             <constraint firstItem="fEC-pW-rg6" firstAttribute="top" secondItem="h1W-9V-KeE" secondAttribute="bottom" constant="20" id="ZyS-Dd-zw4"/>
@@ -145,7 +144,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fEC-pW-rg6" secondAttribute="bottom" constant="20" id="s4u-Ct-vnp"/>
                             <constraint firstItem="naR-P5-LtC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="13" id="wDD-gk-aEg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="d6j-u2-rdH" secondAttribute="trailing" constant="16" id="xr0-D4-Iln"/>
-                            <constraint firstItem="5nn-ht-FIC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="y6N-zy-UEf"/>
+                            <constraint firstItem="5nn-ht-FIC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="y6N-zy-UEf"/>
                             <constraint firstItem="lna-15-kyy" firstAttribute="top" secondItem="naR-P5-LtC" secondAttribute="bottom" constant="13" id="zrg-jK-qLR"/>
                         </constraints>
                     </view>
