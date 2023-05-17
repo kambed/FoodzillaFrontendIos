@@ -35,4 +35,11 @@ final class LoginViewController: UIViewController, Storyboarded {
     private func goToRegister() {
         UIApplication.shared.sceneDelegate?.navigationController?.pushViewController( RegisterCoordinator.prepare(), animated: true)
     }
+    
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        
+        UIApplication.shared.sceneDelegate?.changeRootViewController(viewController: ContainerCoordinator.prepare())
+        
+    }
 }
