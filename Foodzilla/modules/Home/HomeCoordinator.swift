@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCoordinator: Coordiantor {
+class HomeCoordinator: Coordinator {
 
     
     static func prepare() -> HomeViewController {

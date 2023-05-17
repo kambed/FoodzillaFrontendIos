@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol Coordiantor {
+protocol Coordinator {
     associatedtype T
     
     static func prepare() -> T

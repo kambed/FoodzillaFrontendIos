@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserPanelCoordinator: Coordiantor {
+class UserPanelCoordinator: Coordinator {
     
     static func prepare() -> UserPanelViewController {
         

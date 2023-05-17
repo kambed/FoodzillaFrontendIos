@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginCoordinator: Coordiantor {
+class LoginCoordinator: Coordinator {
     
     static func prepare() -> LoginViewController {
         

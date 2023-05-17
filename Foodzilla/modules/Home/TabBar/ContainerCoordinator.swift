@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContainerCoordinator: Coordiantor {
+class ContainerCoordinator: Coordinator {
     
     static func prepare() -> ContainerViewController {
 
