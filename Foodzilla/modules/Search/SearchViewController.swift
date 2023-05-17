@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var findRecipesButton: DarkButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -16,7 +16,7 @@ final class SearchViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    let model: SearchViewModel = SearchViewModel()
+    var model: SearchViewModel = SearchViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,16 @@ final class SearchViewController: UIViewController {
 
         saveButton.tintColor = .black
         saveButton.configuration?.image = UIImage(systemName: "bookmark", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
 }
 

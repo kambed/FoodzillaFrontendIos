@@ -11,15 +11,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var navigationController: UINavigationController?
+    
+    var isLoggedIn: Bool = true
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        // FIXME: After token imp: if token available go home, if not, go to main
-
-        let vc = MainViewController.instantiate()
-        navigationController = UINavigationController(rootViewController: vc)
+        initApp()
+    }
+    
+    public func initApp() {
         
+        let vc: UIViewController?
+        
+        if !isLoggedIn {
+            vc = MainViewController.instantiate()
+        } else {
+            vc = ContainerCoordinator.prepare()
+        }
+        
+        navigationController = UINavigationController(rootViewController: vc!)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
