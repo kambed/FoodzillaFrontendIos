@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavouriteRecipesViewController: UIViewController {
+class FavouriteRecipesViewController: UIViewController, Storyboarded {
     
     
     @IBAction func redirectToSearches(_ sender: Any) {
@@ -36,6 +36,16 @@ class FavouriteRecipesViewController: UIViewController {
         favouriteCollectionView.dataSource = self
         favouriteCollectionView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellWithReuseIdentifier: "RecipeTableViewCell")
         checkSearchesButton.title = "Check searches"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
 }
 
