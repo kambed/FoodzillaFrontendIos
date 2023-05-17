@@ -7,13 +7,13 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var recommendationLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var paginationLabel: UILabel!
 
-    let model: HomeViewModel = HomeViewModel()
+    var model: HomeViewModel = HomeViewModel()
 
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -35,7 +35,16 @@ final class HomeViewController: UIViewController {
         usernameLabel.font = FontFamily.SFProText.medium.font(size: 20)
         avatarImage.layer.cornerRadius = 20.0
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {

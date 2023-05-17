@@ -1,0 +1,54 @@
+extend type Query {
+    recipe(id: ID!): Recipe
+    recentlyViewedRecipes: [RecipeSummarization]
+}
+
+extend type Mutation {
+    createRecipe(recipe: RecipeInput): Recipe
+}
+
+input RecipeInput {
+    name: String!
+    description: String
+    timeOfPreparation: Int
+    steps: [String]
+    calories: Float
+    fat: Int
+    sugar: Int
+    sodium: Int
+    protein: Int
+    saturatedFat: Int
+    carbohydrates: Int
+    ingredients: [IngredientInput]
+    tags: [TagInput]
+}
+
+type Recipe {
+    id: ID
+    name: String!
+    description: String
+    timeOfPreparation: Int
+    numberOfSteps: Int
+    steps: [String]
+    numberOfIngredients: Int
+    calories: Float
+    fat: Int
+    sugar: Int
+    sodium: Int
+    protein: Int
+    saturatedFat: Int
+    carbohydrates: Int
+    image: String
+    reviews: [Review]
+    ingredients: [Ingredient]
+    tags: [Tag]
+    rating: Float
+    isFavourite: Boolean
+}
+
+type RecipeSummarization {
+    id: ID
+    name: String!
+    timeOfPreparation: Int
+    image: String
+}

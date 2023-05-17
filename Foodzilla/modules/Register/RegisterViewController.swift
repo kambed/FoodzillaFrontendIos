@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var EmailTextField: MainTextField!
     @IBOutlet weak var FirstNameTextField: MainTextField!
@@ -15,6 +15,9 @@ final class RegisterViewController: UIViewController {
     @IBOutlet weak var PasswordTextField: MainTextField!
     @IBOutlet weak var ConfirmPassTextField: MainTextField!
     @IBOutlet weak var registerButton: LandingButton!
+    
+    var model: RegisterViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

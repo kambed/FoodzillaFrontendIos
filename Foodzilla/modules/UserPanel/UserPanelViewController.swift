@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UserPanelViewController: UIViewController {
+final class UserPanelViewController: UIViewController, Storyboarded {
     @IBOutlet weak var firstNameLabel: MainLabel!
     @IBOutlet weak var lastNameLabel: MainLabel!
     @IBOutlet weak var emailLabel: MainLabel!
@@ -17,7 +17,7 @@ final class UserPanelViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    let model: UserPanelViewModel = UserPanelViewModel()
+    var model: UserPanelViewModel = UserPanelViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +47,16 @@ final class UserPanelViewController: UIViewController {
 
         if tagsLabel.text?.hasSuffix("| ") == true {
             tagsLabel.text?.removeLast(2)
-        }    }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }

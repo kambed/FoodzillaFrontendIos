@@ -1,0 +1,6 @@
+query tags {
+    tags {
+        id
+        name
+    }
+}
