@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterCoordinator: Coordiantor {
+class RegisterCoordinator: Coordinator {
     
     static func prepare() -> RegisterViewController {
         

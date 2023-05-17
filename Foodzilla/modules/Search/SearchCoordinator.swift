@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchCoordinator: Coordiantor {
+class SearchCoordinator: Coordinator {
     
     static func prepare() -> SearchViewController {
         
