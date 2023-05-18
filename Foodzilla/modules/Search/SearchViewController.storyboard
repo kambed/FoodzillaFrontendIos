@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,18 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4y-nA-Qg4" customClass="DarkButton" customModule="Foodzilla" customModuleProvider="target">
-                                <rect key="frame" x="24" y="186" width="346" height="54"/>
+                                <rect key="frame" x="24" y="178" width="346" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="D3E-i3-vE9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jD6-oL-HqR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_logo" translatesAutoresizingMaskIntoConstraints="NO" id="m5x-WV-hnn">
-                                <rect key="frame" x="113" y="73" width="166" height="38"/>
+                                <rect key="frame" x="113" y="73" width="166" height="30"/>
                             </imageView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Add tags" translatesAutoresizingMaskIntoConstraints="NO" id="riV-gN-x0E">
-                                <rect key="frame" x="24" y="125" width="302" height="36"/>
+                                <rect key="frame" x="24" y="117" width="302" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Fpp-GR-a5r"/>
                                 </constraints>
@@ -40,7 +41,7 @@
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI8-DG-Xym" customClass="DarkButton" customModule="Foodzilla" customModuleProvider="target">
-                                <rect key="frame" x="334" y="125" width="36" height="36"/>
+                                <rect key="frame" x="334" y="117" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="0OP-P9-9sq"/>
                                     <constraint firstAttribute="height" constant="36" id="0q7-on-XsA"/>
@@ -66,7 +67,7 @@
                                 <buttonConfiguration key="configuration" style="plain"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cvX-AB-wus">
-                                <rect key="frame" x="24" y="265" width="345" height="397"/>
+                                <rect key="frame" x="24" y="257" width="345" height="405"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="30" id="dse-2w-c1i">
                                     <size key="itemSize" width="30" height="30"/>
@@ -93,7 +94,6 @@
                             <constraint firstItem="m5x-WV-hnn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="3Wt-QT-ivH"/>
                             <constraint firstItem="riV-gN-x0E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="73x-rH-5BA"/>
                             <constraint firstItem="m5x-WV-hnn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="113" id="DxD-MH-Zxy"/>
-                            <constraint firstItem="TU7-fC-bbU" firstAttribute="top" secondItem="E4y-nA-Qg4" secondAttribute="bottom" constant="447" id="FRJ-r6-Rd6"/>
                             <constraint firstItem="azM-ca-bPb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="98" id="GJZ-oP-1Ib"/>
                             <constraint firstItem="riV-gN-x0E" firstAttribute="top" secondItem="m5x-WV-hnn" secondAttribute="bottom" constant="14" id="I3R-Ni-Pgc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="E4y-nA-Qg4" secondAttribute="trailing" constant="23" id="LQy-fW-6fv"/>

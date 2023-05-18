@@ -8,7 +8,7 @@
 import UIKit
 import MaterialComponents
 
-class FiltersViewController: UIViewController {
+class FiltersViewController: UIViewController, Storyboarded {
 
     
     @IBOutlet weak var screenTitleLabel: UILabel!

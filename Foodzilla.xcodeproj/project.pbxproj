@@ -144,6 +144,7 @@
 		813E15F729F1DCDD00F4C492 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15F629F1DCDD00F4C492 /* SearchViewController.swift */; };
 		813E15FC29F1DEAB00F4C492 /* DarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15FB29F1DEAB00F4C492 /* DarkButton.swift */; };
 		813E15FE29F1DF0A00F4C492 /* DarkButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813E15FD29F1DF0A00F4C492 /* DarkButton.xib */; };
+		8154D5CD2A14C10F00EAAC5B /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154D5CC2A14C10F00EAAC5B /* FavouritesCoordinator.swift */; };
 		81611DCD29FAD5C700DCF8FA /* OpinionCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81611DCC29FAD5C700DCF8FA /* OpinionCard.xib */; };
 		81611DCF29FAD5D000DCF8FA /* OpinionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81611DCE29FAD5D000DCF8FA /* OpinionCard.swift */; };
 		81611DD229FAF84D00DCF8FA /* AddOpinionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81611DD129FAF84D00DCF8FA /* AddOpinionViewController.storyboard */; };
@@ -313,15 +314,16 @@
 		813E15F629F1DCDD00F4C492 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		813E15FB29F1DEAB00F4C492 /* DarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButton.swift; sourceTree = "<group>"; };
 		813E15FD29F1DF0A00F4C492 /* DarkButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DarkButton.xib; sourceTree = "<group>"; };
+		8154D5CC2A14C10F00EAAC5B /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
 		81611DCC29FAD5C700DCF8FA /* OpinionCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpinionCard.xib; sourceTree = "<group>"; };
 		81611DCE29FAD5D000DCF8FA /* OpinionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionCard.swift; sourceTree = "<group>"; };
 		81611DD129FAF84D00DCF8FA /* AddOpinionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOpinionViewController.storyboard; sourceTree = "<group>"; };
 		81611DD329FAF85A00DCF8FA /* AddOpinionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOpinionViewController.swift; sourceTree = "<group>"; };
-		817F392329FACEDF00C182B6 /* OpinionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpinionsViewController.storyboard; sourceTree = "<group>"; };
 		817D4DD72A12AF1000656979 /* FavouriteRecipesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteRecipesViewController.storyboard; sourceTree = "<group>"; };
 		817D4DD92A12AF2600656979 /* FavouriteRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRecipesViewController.swift; sourceTree = "<group>"; };
 		817D4DDB2A12B16200656979 /* FavouriteSearchesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteSearchesViewController.storyboard; sourceTree = "<group>"; };
 		817D4DDD2A12B17600656979 /* FavouriteSearchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSearchesViewController.swift; sourceTree = "<group>"; };
+		817F392329FACEDF00C182B6 /* OpinionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpinionsViewController.storyboard; sourceTree = "<group>"; };
 		817F392529FACEEC00C182B6 /* OpinionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionsViewController.swift; sourceTree = "<group>"; };
 		8187AC6829F1E84E00AA0904 /* RecipeTagFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTagFilter.xib; sourceTree = "<group>"; };
 		8187AC6A29F1E87B00AA0904 /* RecipeTagFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTagFilter.swift; sourceTree = "<group>"; };
@@ -894,6 +896,7 @@
 			children = (
 				817D4DD62A12AEEB00656979 /* Searches */,
 				817D4DD52A12AEE400656979 /* Recipes */,
+				8154D5CC2A14C10F00EAAC5B /* FavouritesCoordinator.swift */,
 			);
 			path = Favourites;
 			sourceTree = "<group>";
@@ -1195,6 +1198,7 @@
 			files = (
 				6A2BB0B32A13C6F80006B336 /* UIApplication+Extensions.swift in Sources */,
 				6A2BB0912A1214910006B336 /* SortDirection.graphql.swift in Sources */,
+				8154D5CD2A14C10F00EAAC5B /* FavouritesCoordinator.swift in Sources */,
 				6A2BB0A02A1214910006B336 /* FilterType.graphql.swift in Sources */,
 				6A99845A2A14B21400F50E4A /* ContainerViewController.swift in Sources */,
 				6A99845F2A14B49600F50E4A /* SearchCoordinator.swift in Sources */,

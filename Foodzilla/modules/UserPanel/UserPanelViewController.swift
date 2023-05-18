@@ -8,6 +8,7 @@
 import UIKit
 
 final class UserPanelViewController: UIViewController, Storyboarded {
+    @IBOutlet weak var logOutButton: DarkButton!
     @IBOutlet weak var firstNameLabel: MainLabel!
     @IBOutlet weak var lastNameLabel: MainLabel!
     @IBOutlet weak var emailLabel: MainLabel!
@@ -33,6 +34,8 @@ final class UserPanelViewController: UIViewController, Storyboarded {
         firstNameLabel.mainLabel.text = "User"
         lastNameLabel.mainLabel.text = "Name"
         emailLabel.mainLabel.text = "abc@gmail.com"
+        
+        logOutButton.title = "Log out"
 
         tagsLabel.text = ""
 

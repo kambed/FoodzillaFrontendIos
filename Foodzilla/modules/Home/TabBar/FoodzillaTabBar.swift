@@ -52,7 +52,7 @@ class FoodzillaTabBar: UITabBarController {
     }()
     
     lazy var favoritesVC: UINavigationController = {
-        let vc = UIViewController()
+        let vc = FavouritesCoordinator.prepare()
         vc.tabBarItem.image = UIImage(systemName: "heart.fill")
         vc.loadViewIfNeeded()
         vc.view.backgroundColor = .white

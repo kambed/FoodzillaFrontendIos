@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -47,12 +47,15 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl8-X0-fxT" customClass="LandingButton" customModule="Foodzilla" customModuleProvider="target">
-                                <rect key="frame" x="107" y="619.66666666666663" width="178" height="65"/>
+                                <rect key="frame" x="107" y="486.66666666666669" width="178" height="45.000000000000057"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lyz-9O-N6y"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-bW-ZaY">
-                                <rect key="frame" x="74" y="722.66666666666663" width="71.333333333333314" height="20.333333333333371"/>
+                                <rect key="frame" x="74" y="551.66666666666663" width="71.333333333333314" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,11 +78,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn0-rR-wvb">
-                                <rect key="frame" x="155.33333333333337" y="722.66666666666663" width="179.66666666666663" height="20.333333333333371"/>
+                                <rect key="frame" x="155.33333333333337" y="551.66666666666663" width="179.66666666666663" height="91.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kh-cH-Vkk" customClass="DarkButton" customModule="Foodzilla" customModuleProvider="target">
+                                <rect key="frame" x="107" y="743" width="178" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="M1l-fK-HY1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,20 +100,22 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TjD-xr-N18" secondAttribute="trailing" constant="161" id="Epr-rq-znT"/>
                             <constraint firstItem="Jcd-Gy-Rh8" firstAttribute="top" secondItem="TjD-xr-N18" secondAttribute="bottom" constant="30" id="FDB-Ws-sFq"/>
                             <constraint firstItem="Sl8-X0-fxT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="107" id="HnC-EQ-k19"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Pn0-rR-wvb" secondAttribute="bottom" constant="75" id="Hxn-rR-B1o"/>
                             <constraint firstItem="Jcd-Gy-Rh8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="112" id="QGa-kt-N5g"/>
                             <constraint firstItem="TjD-xr-N18" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="161" id="SQ9-Sn-ujx"/>
-                            <constraint firstItem="Sl8-X0-fxT" firstAttribute="top" secondItem="IGo-HZ-zCh" secondAttribute="bottom" constant="183" id="TX7-mu-O8T"/>
+                            <constraint firstItem="Sl8-X0-fxT" firstAttribute="top" secondItem="IGo-HZ-zCh" secondAttribute="bottom" constant="50" id="TX7-mu-O8T"/>
+                            <constraint firstItem="7Kh-cH-Vkk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="107" id="XFd-OA-fGs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sl8-X0-fxT" secondAttribute="trailing" constant="108" id="XMe-Fu-vGz"/>
                             <constraint firstItem="IGo-HZ-zCh" firstAttribute="top" secondItem="Jcd-Gy-Rh8" secondAttribute="bottom" constant="65" id="Xu4-jg-xhg"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="rLP-bW-ZaY" secondAttribute="bottom" constant="75" id="ZuV-aG-Btg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7Kh-cH-Vkk" secondAttribute="bottom" constant="30" id="afv-oG-oaF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IGo-HZ-zCh" secondAttribute="trailing" constant="24" id="ddT-z3-5Gx"/>
                             <constraint firstItem="rLP-bW-ZaY" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="58" id="dmu-3g-wph"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jcd-Gy-Rh8" secondAttribute="trailing" constant="111" id="e2m-7W-PJ9"/>
                             <constraint firstItem="Pn0-rR-wvb" firstAttribute="leading" secondItem="rLP-bW-ZaY" secondAttribute="trailing" constant="10" id="gKD-Xc-gHi"/>
+                            <constraint firstItem="7Kh-cH-Vkk" firstAttribute="top" relation="lessThanOrEqual" secondItem="Pn0-rR-wvb" secondAttribute="bottom" constant="100" id="ksJ-oS-56k"/>
                             <constraint firstItem="TjD-xr-N18" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="nAe-OJ-qoZ"/>
-                            <constraint firstItem="Pn0-rR-wvb" firstAttribute="top" secondItem="Sl8-X0-fxT" secondAttribute="bottom" constant="38" id="rOI-Pp-amf"/>
-                            <constraint firstItem="rLP-bW-ZaY" firstAttribute="top" secondItem="Sl8-X0-fxT" secondAttribute="bottom" constant="38" id="v2n-Fd-fBI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7Kh-cH-Vkk" secondAttribute="trailing" constant="108" id="pdU-nS-OQM"/>
+                            <constraint firstItem="Pn0-rR-wvb" firstAttribute="top" secondItem="Sl8-X0-fxT" secondAttribute="bottom" constant="20" id="rOI-Pp-amf"/>
+                            <constraint firstItem="rLP-bW-ZaY" firstAttribute="top" secondItem="Sl8-X0-fxT" secondAttribute="bottom" constant="20" id="v2n-Fd-fBI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -110,6 +123,7 @@
                         <outlet property="emailLabel" destination="7TU-cX-VoN" id="uzf-w4-xtd"/>
                         <outlet property="firstNameLabel" destination="8C3-YB-wXn" id="xjo-ns-e1r"/>
                         <outlet property="lastNameLabel" destination="7tr-iJ-URV" id="Ow5-JL-GbQ"/>
+                        <outlet property="logOutButton" destination="7Kh-cH-Vkk" id="oYf-fa-W2b"/>
                         <outlet property="modifyButton" destination="Sl8-X0-fxT" id="51f-OG-WKM"/>
                         <outlet property="tagsLabel" destination="Pn0-rR-wvb" id="0oI-bo-ZW4"/>
                         <outlet property="usernameLabel" destination="HRJ-k2-Y1f" id="7vI-kg-GW5"/>
