@@ -51,11 +51,6 @@ final class HomeViewController: UIViewController, Storyboarded {
     }
     
     private func showRecipeDetail(_ recipe: Recipe) {
-//        let recipeDetailVC = RecipeViewController()
-//        recipeDetailVC.recipeTitle = recipe.title
-//        recipeDetailVC.recipeDescription = recipe.title.description
-//        navigationController?.pushViewController(recipeDetailVC, animated: true)
-        
         let storyboard = UIStoryboard(name: "RecipeViewController", bundle: nil)
         
         let vc = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")

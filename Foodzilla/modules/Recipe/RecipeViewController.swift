@@ -90,8 +90,6 @@ class RecipeViewController: UIViewController {
 
         }
         
-        
-        
         recipeTagsCV = RecipeTagsCV(data: recipeTagsData)
         
         recipeTagsCollectionView.register(ChipCollectionViewCell.self, forCellWithReuseIdentifier: "ChipCollectionViewCell")
