@@ -58,6 +58,10 @@ class RecipeViewController: UIViewController {
         let underlineText = reviewsLabel.text!
         let attributedString = NSMutableAttributedString(string: underlineText, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         reviewsLabel.attributedText = attributedString
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        reviewsLabel.isUserInteractionEnabled = true
+        reviewsLabel.addGestureRecognizer(tapGesture)
 
         descriptionLabel.font = FontFamily.SFProText.bold.font(size: 16)
         recipeDescription.text = "delicious, crunchy fried chicken. this recipe came from the ..."
@@ -86,13 +90,22 @@ class RecipeViewController: UIViewController {
 
         }
         
-        
-        
         recipeTagsCV = RecipeTagsCV(data: recipeTagsData)
         
         recipeTagsCollectionView.register(ChipCollectionViewCell.self, forCellWithReuseIdentifier: "ChipCollectionViewCell")
         recipeTagsCollectionView.delegate = recipeTagsCV
         recipeTagsCollectionView.dataSource = recipeTagsCV
+    }
+    
+    @objc private func labelTapped() {
+//        let vc = OpinionsViewController()
+//        navigationController?.pushViewController(vc, animated: true)
+        
+        let storyboard = UIStoryboard(name: "OpinionsViewController", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "OpinionsViewController")
+        
+        present(vc, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -104,7 +117,7 @@ class RecipeViewController: UIViewController {
 
     @IBAction func showNutrition(_ sender: Any) {
 
-        let vc = UIStoryboard(name: "NutritionSheet", bundle: nil).instantiateViewController(withIdentifier: "NutritionSheet")
+        let vc = UIStoryboard(name: "NutritionSheetViewController", bundle: nil).instantiateViewController(withIdentifier: "NutritionSheetViewController")
 
         vc.sheetPresentationController?.detents = [.medium(), .large()]
 

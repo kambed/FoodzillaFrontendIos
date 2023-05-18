@@ -7,7 +7,19 @@
 
 import UIKit
 
-class FavouriteRecipesViewController: UIViewController, Storyboarded {
+class FavouriteRecipesViewController: UIViewController, Storyboarded, RecipeTableViewCellDelegate {
+    func didTapRecipeCell(_ cell: RecipeTableViewCell) {
+        
+        if let indexPath =  recentCollectionView.indexPath(for: cell){
+            let recipe = model.recipes[indexPath.item]
+            showRecipeDetail(recipe)
+        }
+        else if let indexPath =  favouriteCollectionView.indexPath(for: cell){
+            let recipe = model.recipes[indexPath.item]
+            showRecipeDetail(recipe)
+        }
+        
+    }
     
     
     @IBAction func redirectToSearches(_ sender: Any) {
@@ -47,6 +59,14 @@ class FavouriteRecipesViewController: UIViewController, Storyboarded {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
+    private func showRecipeDetail(_ recipe: Recipe) {
+        let storyboard = UIStoryboard(name: "RecipeViewController", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
+        
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 
@@ -59,6 +79,8 @@ extension FavouriteRecipesViewController: UICollectionViewDelegate, UICollection
 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeTableViewCell", for: indexPath) as? RecipeTableViewCell else { fatalError() }
 
+        cell.delegate = self
+        
         cell.recipeImage.image = model.recipes[indexPath.item].image
         cell.titleLabel.text = model.recipes[indexPath.item].title
         cell.timeLabel.text = model.recipes[indexPath.item].duration

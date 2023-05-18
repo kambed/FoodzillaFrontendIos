@@ -12,12 +12,15 @@ class RecipeTableViewCell: UICollectionViewCell {
     @IBOutlet var recipeImage: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
+    
+    weak var delegate: RecipeTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         setUpImage()
         setUpLabels()
+        setUpGestureRecognizers()
     }
 
     private func setUpImage() {
@@ -27,5 +30,15 @@ class RecipeTableViewCell: UICollectionViewCell {
     private func setUpLabels() {
         titleLabel.font = FontFamily.SFProText.medium.font(size: 15)
         timeLabel.font = FontFamily.SFProText.medium.font(size: 13)
+    }
+    
+    private func setUpGestureRecognizers() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+        recipeImage.isUserInteractionEnabled = true
+        recipeImage.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func cellTapped() {
+        delegate?.didTapRecipeCell(self)
     }
 }
