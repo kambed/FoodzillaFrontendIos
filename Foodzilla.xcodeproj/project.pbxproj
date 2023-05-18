@@ -140,6 +140,9 @@
 		6AFDB21329D3717E00AC60EF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21029D3717E00AC60EF /* Images.swift */; };
 		6AFDB21429D3717E00AC60EF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21129D3717E00AC60EF /* Colors.swift */; };
 		6AFDB21529D3717E00AC60EF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDB21229D3717E00AC60EF /* Fonts.swift */; };
+		810321E82A1670F900AA3101 /* AddRecipeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810321E72A1670F900AA3101 /* AddRecipeViewController.storyboard */; };
+		810321EA2A16710B00AA3101 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810321E92A16710B00AA3101 /* AddRecipeViewController.swift */; };
+		810321EC2A1679D000AA3101 /* AddRecipeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810321EB2A1679D000AA3101 /* AddRecipeCoordinator.swift */; };
 		813E15F529F1DCC900F4C492 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813E15F429F1DCC900F4C492 /* SearchViewController.storyboard */; };
 		813E15F729F1DCDD00F4C492 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15F629F1DCDD00F4C492 /* SearchViewController.swift */; };
 		813E15FC29F1DEAB00F4C492 /* DarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E15FB29F1DEAB00F4C492 /* DarkButton.swift */; };
@@ -310,6 +313,9 @@
 		6AFDB21029D3717E00AC60EF /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		6AFDB21129D3717E00AC60EF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6AFDB21229D3717E00AC60EF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		810321E72A1670F900AA3101 /* AddRecipeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipeViewController.storyboard; sourceTree = "<group>"; };
+		810321E92A16710B00AA3101 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		810321EB2A1679D000AA3101 /* AddRecipeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeCoordinator.swift; sourceTree = "<group>"; };
 		813E15F429F1DCC900F4C492 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		813E15F629F1DCDD00F4C492 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		813E15FB29F1DEAB00F4C492 /* DarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButton.swift; sourceTree = "<group>"; };
@@ -852,6 +858,16 @@
 			path = generated;
 			sourceTree = "<group>";
 		};
+		810321E62A1670DF00AA3101 /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				810321E72A1670F900AA3101 /* AddRecipeViewController.storyboard */,
+				810321E92A16710B00AA3101 /* AddRecipeViewController.swift */,
+				810321EB2A1679D000AA3101 /* AddRecipeCoordinator.swift */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
 		813E15F329F1DCB000F4C492 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +957,7 @@
 		81A4125329DE04990005AC33 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				810321E62A1670DF00AA3101 /* AddRecipe */,
 				6A99845B2A14B28E00F50E4A /* TabBar */,
 				6A8B165129E7257800DAE5D0 /* RecipeTableViewCell */,
 				81A4125629DE04DD0005AC33 /* HomeViewController.storyboard */,
@@ -1101,6 +1118,7 @@
 				6AFDB20429D370A500AC60EF /* SF-Pro-Text-Ultralight.otf in Resources */,
 				6A2BAFB22A120F270006B336 /* customer-create.graphql in Resources */,
 				6A2BAF992A120E9A0006B336 /* savedSearch.graphqls in Resources */,
+				810321E82A1670F900AA3101 /* AddRecipeViewController.storyboard in Resources */,
 				6A2BAFB32A120F270006B336 /* customer-edit.graphql in Resources */,
 				6A2BAFB92A120F270006B336 /* customer-login.graphql in Resources */,
 				6A2BAF9B2A120E9A0006B336 /* tag.graphqls in Resources */,
@@ -1260,6 +1278,7 @@
 				813E15FC29F1DEAB00F4C492 /* DarkButton.swift in Sources */,
 				6A2BAF5029FEA3500006B336 /* RatedView.swift in Sources */,
 				6AADB8D029D37CC800A5FC44 /* LoginViewController.swift in Sources */,
+				810321EA2A16710B00AA3101 /* AddRecipeViewController.swift in Sources */,
 				6A2BAF6029FEB2120006B336 /* MainLabel.swift in Sources */,
 				6A2BB09D2A1214910006B336 /* RecipeSummarization.graphql.swift in Sources */,
 				6A9984582A14B20300F50E4A /* FoodzillaTabBar.swift in Sources */,
@@ -1270,6 +1289,7 @@
 				6A8B165F29E7302C00DAE5D0 /* BaseView.swift in Sources */,
 				6A2BB0932A1214910006B336 /* Ingredient.graphql.swift in Sources */,
 				81611DCF29FAD5D000DCF8FA /* OpinionCard.swift in Sources */,
+				810321EC2A1679D000AA3101 /* AddRecipeCoordinator.swift in Sources */,
 				6A2BB08F2A1214910006B336 /* IngredientsQuery.graphql.swift in Sources */,
 				6A2BB0832A1214910006B336 /* CreateMutation.graphql.swift in Sources */,
 				8197350A29F59688009FCFD0 /* UserPanelViewModel.swift in Sources */,

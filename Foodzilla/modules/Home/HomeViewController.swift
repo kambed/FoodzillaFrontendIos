@@ -12,6 +12,8 @@ protocol RecipeTableViewCellDelegate: AnyObject {
 }
 
 final class HomeViewController: UIViewController, Storyboarded {
+   
+    @IBOutlet weak var addRecipeButton: DarkButton!
     @IBOutlet weak var recommendationLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var greetingLabel: UILabel!
@@ -38,7 +40,18 @@ final class HomeViewController: UIViewController, Storyboarded {
         greetingLabel.font = FontFamily.SFProText.medium.font(size: 20)
         usernameLabel.font = FontFamily.SFProText.medium.font(size: 20)
         avatarImage.layer.cornerRadius = 20.0
+        
+        addRecipeButton.configuration?.image = UIImage(systemName: "plus")
+        
+        let tr = UITapGestureRecognizer(target: self, action: #selector(goToAddRecipeView))
+        addRecipeButton.isUserInteractionEnabled = true
+        addRecipeButton.addGestureRecognizer(tr)
     }
+                                        
+    @objc private func goToAddRecipeView() {
+            UIApplication.shared.sceneDelegate?.navigationController?.pushViewController( AddRecipeCoordinator.prepare(), animated: true)
+            
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
