@@ -17,7 +17,7 @@ final class OpinionsViewController: UIViewController {
 
     @IBAction func addOpinionSheet(_ sender: Any) {
 
-        let vc = UIStoryboard(name: "AddOpinionSheet", bundle: nil).instantiateViewController(withIdentifier: "AddOpinionSheet")
+        let vc = UIStoryboard(name: "AddOpinionViewController", bundle: nil).instantiateViewController(withIdentifier: "AddOpinionViewController")
 
         vc.sheetPresentationController?.detents = [.medium(), .large()]
 

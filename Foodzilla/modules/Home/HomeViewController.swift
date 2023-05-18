@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol RecipeTableViewCellDelegate: AnyObject {
+    func didTapRecipeCell(_ cell: RecipeTableViewCell)
+}
+
 final class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var recommendationLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -45,6 +49,19 @@ final class HomeViewController: UIViewController, Storyboarded {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
+    private func showRecipeDetail(_ recipe: Recipe) {
+//        let recipeDetailVC = RecipeViewController()
+//        recipeDetailVC.recipeTitle = recipe.title
+//        recipeDetailVC.recipeDescription = recipe.title.description
+//        navigationController?.pushViewController(recipeDetailVC, animated: true)
+        
+        let storyboard = UIStoryboard(name: "RecipeViewController", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
+        
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -55,7 +72,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeTableViewCell", for: indexPath) as? RecipeTableViewCell else { fatalError() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeTableViewCell", for: indexPath) as? RecipeTableViewCell else { fatalError("Failed to dequeue RecipetableViewCell") }
+        
+//        cell.configure(with:model.recipes[indexPath.item])
+        
+        cell.delegate = self
 
         cell.recipeImage.image = model.recipes[indexPath.item].image
         cell.titleLabel.text = model.recipes[indexPath.item].title
@@ -64,4 +85,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
 
+}
+
+extension HomeViewController: RecipeTableViewCellDelegate {
+    func didTapRecipeCell(_ cell: RecipeTableViewCell) {
+        guard let indexPath = collectionView.indexPath(for: cell) else {
+            return
+        }
+        let recipe = model.recipes[indexPath.item]
+        showRecipeDetail(recipe)
+    }
 }
