@@ -21,6 +21,7 @@ class MainViewController: UIViewController, Storyboarded {
     override func loadView() {
         super.loadView()
 
+        title = ""
         titleLabel.text = "Ready for a cooking experience?"
         titleLabel.font = FontFamily.SFProText.black.font(size: 33)
         titleLabel.textColor = .white

@@ -101,6 +101,7 @@ extension FavouriteRecipesViewController: UICollectionViewDelegate, UICollection
 
         cell.delegate = self
         cell.recipeImage.image = model.recipes[indexPath.item].image
+        cell.recipeImage.contentMode = .scaleToFill
         cell.titleLabel.text = model.recipes[indexPath.item].name
         cell.timeLabel.text = "\(model.recipes[indexPath.item].timeOfPreparation)"
 
