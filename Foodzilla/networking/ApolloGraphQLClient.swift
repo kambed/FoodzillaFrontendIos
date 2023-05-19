@@ -15,14 +15,50 @@ struct User: Codable {
     var password: String?
 }
 
+let BASE_URL: StaticString = "http://localhost:8080/graphql"
+
+class TokenInterceptor: ApolloInterceptor {
+    
+    let token: String
+    
+    init(token: String) {
+        self.token = token
+    }
+    
+    func interceptAsync<Operation>(
+        chain: RequestChain,
+        request: HTTPRequest<Operation>,
+        response: HTTPResponse<Operation>?,
+        completion: @escaping (Result<GraphQLResult<Operation.Data>, Error>) -> Void) where Operation : GraphQLOperation {
+            request.addHeader(name: "Authorization", value: "Bearer \(token)")
+            chain.proceedAsync(request: request, response: response, completion: completion)
+        }
+    
+}
+
+class NetworkInterceptorsProvider: DefaultInterceptorProvider {
+    
+    let interceptors: [ApolloInterceptor]
+    
+    init(interceptors: [ApolloInterceptor], store: ApolloStore) {
+        self.interceptors = interceptors
+        super.init(store: store)
+    }
+    
+    override func interceptors<Operation>(for operation: Operation) -> [ApolloInterceptor] where Operation : GraphQLOperation {
+        var interceptors = super.interceptors(for: operation)
+        self.interceptors.forEach { interceptor in
+            interceptors.insert(interceptor, at: 0)
+        }
+        return interceptors
+    }
+}
+
 class ApolloGraphQLClient {
     
     private init() { }
     
-    private var apolloClient: ApolloClient = {
-        let apolloClient = ApolloClient(url: URL(string: "http://localhost:8080/graphql")!)
-        return apolloClient
-    }()
+    private var apolloClient: ApolloClient = ApolloClient(url: URL(string: "\(BASE_URL)")!)
     
     static let shared: ApolloGraphQLClient = {
         return ApolloGraphQLClient()
@@ -62,6 +98,21 @@ class ApolloGraphQLClient {
         }
     }
     
+    // MARK: Util methods
+    
+    public func updateBearerToken(token: String) {
+        let endpointURL = URL(string: "\(BASE_URL)")!
+        let store = ApolloStore()
+        let interceptorProvider = NetworkInterceptorsProvider(
+            interceptors: [TokenInterceptor(token: token)],
+            store: store
+        )
+        let networkTransport = RequestChainNetworkTransport(
+            interceptorProvider: interceptorProvider, endpointURL: endpointURL
+        )
+        apolloClient = ApolloClient(networkTransport: networkTransport, store: store)
+    }
+    
     // MARK: User
     
     public func createUser(user: User) async throws -> FoodzillaGraphQL.CreateMutation.Data {
@@ -87,6 +138,12 @@ class ApolloGraphQLClient {
     
     public func getTags() async throws -> FoodzillaGraphQL.TagsQuery.Data {
         return try await performQuery(operation: FoodzillaGraphQL.TagsQuery())
+    }
+    
+    // MARK: Recipes
+    
+    public func getRecommendations() async throws -> FoodzillaGraphQL.GetRecommendationsQuery.Data {
+        return try await performQuery(operation: FoodzillaGraphQL.GetRecommendationsQuery())
     }
 }
 

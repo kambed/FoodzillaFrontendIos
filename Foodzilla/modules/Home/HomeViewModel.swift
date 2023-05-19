@@ -6,19 +6,26 @@
 //
 
 import UIKit
+import Combine
 
 struct Recipe {
+    let id: String
     let image: UIImage
-    let title: String
-    let duration: String
+    let name: String
+    let timeOfPreparation: Int
 }
 
 class HomeViewModel {
 
-    var recipes: [Recipe] = [
-        Recipe(image: Assets.utilFood1.image, title: "Creamy pasta", duration: "20 mins"),
-        Recipe(image: Assets.utilFood2.image, title: "Alfredo pasta", duration: "35 mins"),
-        Recipe(image: Assets.utilFood3.image, title: "Pesto pasta", duration: "20 mins"),
-        Recipe(image: Assets.utilFood4.image, title: "Frutti di mare pasta", duration: "35 mins")
-    ]
+    @Published private(set) var recipes: [Recipe] = []
+    
+    
+    
+    func fetchRecipes() async throws {
+        do {
+            recipes = try await ApolloGraphQLClient.shared.getRecommendations().recommendations.map({ Recipe(id: $0!.id!, image: convertBase64ToUIImage(base64String: $0!.image!)!, name: $0!.name, timeOfPreparation: $0!.timeOfPreparation!) })
+        } catch let err {
+            print(err)
+        }
+    }
 }

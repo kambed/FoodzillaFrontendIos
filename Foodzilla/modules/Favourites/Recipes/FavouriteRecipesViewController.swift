@@ -48,6 +48,18 @@ class FavouriteRecipesViewController: UIViewController, Storyboarded, RecipeTabl
         favouriteCollectionView.dataSource = self
         favouriteCollectionView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellWithReuseIdentifier: "RecipeTableViewCell")
         checkSearchesButton.title = "Check searches"
+        
+        Task {
+            do {
+                let creds = try await ApolloGraphQLClient.shared.loginUser(user: User(username: "username123", password: "Password123!"))
+                ApolloGraphQLClient.shared.updateBearerToken(token: creds.login!.token)
+                try await model.fetchRecipes()
+                recentCollectionView.reloadSections(IndexSet(integer: 0))
+                favouriteCollectionView.reloadSections(IndexSet(integer: 0))
+            } catch let err {
+                print(err)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,10 +92,9 @@ extension FavouriteRecipesViewController: UICollectionViewDelegate, UICollection
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeTableViewCell", for: indexPath) as? RecipeTableViewCell else { fatalError() }
 
         cell.delegate = self
-        
         cell.recipeImage.image = model.recipes[indexPath.item].image
-        cell.titleLabel.text = model.recipes[indexPath.item].title
-        cell.timeLabel.text = model.recipes[indexPath.item].duration
+        cell.titleLabel.text = model.recipes[indexPath.item].name
+        cell.timeLabel.text = "\(model.recipes[indexPath.item].timeOfPreparation)"
 
         return cell
     }

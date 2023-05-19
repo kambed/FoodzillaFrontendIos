@@ -1,0 +1,8 @@
+query GetRecommendations {
+    recommendations {
+            id
+            name
+            timeOfPreparation
+            image
+    }
+}

@@ -28,6 +28,17 @@ final class HomeViewController: UIViewController, Storyboarded {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellWithReuseIdentifier: "RecipeTableViewCell")
+        
+        Task {
+            do {
+                let creds = try await ApolloGraphQLClient.shared.loginUser(user: User(username: "username123", password: "Password123!"))
+                ApolloGraphQLClient.shared.updateBearerToken(token: creds.login!.token)
+                try await model.fetchRecipes()
+                collectionView.reloadSections(IndexSet(integer: 0))
+            } catch let err {
+                print(err)
+            }
+        }
     }
 
     override func loadView() {
@@ -74,8 +85,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.delegate = self
 
         cell.recipeImage.image = model.recipes[indexPath.item].image
-        cell.titleLabel.text = model.recipes[indexPath.item].title
-        cell.timeLabel.text = model.recipes[indexPath.item].duration
+        cell.titleLabel.text = model.recipes[indexPath.item].name
+        cell.timeLabel.text = "\(model.recipes[indexPath.item].timeOfPreparation) mins"
 
         return cell
     }
