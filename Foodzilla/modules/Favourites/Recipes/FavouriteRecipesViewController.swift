@@ -6,37 +6,18 @@
 //
 
 import UIKit
+import Combine
 
 class FavouriteRecipesViewController: UIViewController, Storyboarded, RecipeTableViewCellDelegate {
-    func didTapRecipeCell(_ cell: RecipeTableViewCell) {
-        
-        if let indexPath =  recentCollectionView.indexPath(for: cell){
-            let recipe = model.recipes[indexPath.item]
-            showRecipeDetail(recipe)
-        }
-        else if let indexPath =  favouriteCollectionView.indexPath(for: cell){
-            let recipe = model.recipes[indexPath.item]
-            showRecipeDetail(recipe)
-        }
-        
-    }
     
-    
-    @IBAction func redirectToSearches(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "FavouriteSearchesViewController", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(withIdentifier: "FavouriteSearchesViewController")
-        
-        present(vc, animated: true, completion: nil)
-    }
     @IBOutlet weak var checkSearchesButton: LandingButton!
-    
     @IBOutlet weak var recentCollectionView: UICollectionView!
     @IBOutlet weak var favouriteCollectionView: UICollectionView!
     @IBOutlet weak var recentPaginationLabel: UILabel!
     @IBOutlet weak var favouritePaginationLabel: UILabel!
     
-    let model: HomeViewModel = HomeViewModel()
+    var model: FavouriteRecipesViewModel!
+    var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +32,6 @@ class FavouriteRecipesViewController: UIViewController, Storyboarded, RecipeTabl
         
         Task {
             do {
-                let creds = try await ApolloGraphQLClient.shared.loginUser(user: User(username: "username123", password: "Password123!"))
-                ApolloGraphQLClient.shared.updateBearerToken(token: creds.login!.token)
                 try await model.fetchRecipes()
                 recentCollectionView.reloadSections(IndexSet(integer: 0))
                 favouriteCollectionView.reloadSections(IndexSet(integer: 0))
@@ -60,6 +39,14 @@ class FavouriteRecipesViewController: UIViewController, Storyboarded, RecipeTabl
                 print(err)
             }
         }
+        
+        model.$recipes.sink { [weak self] _ in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                self.recentCollectionView.reloadSections(IndexSet(integer: 0))
+                self.favouriteCollectionView.reloadSections(IndexSet(integer: 0))
+            }
+        }.store(in: &cancellables)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,6 +65,27 @@ class FavouriteRecipesViewController: UIViewController, Storyboarded, RecipeTabl
         let vc = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
         
         present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func redirectToSearches(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "FavouriteSearchesViewController", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "FavouriteSearchesViewController")
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func didTapRecipeCell(_ cell: RecipeTableViewCell) {
+        
+        if let indexPath =  recentCollectionView.indexPath(for: cell){
+            let recipe = model.recipes[indexPath.item]
+            showRecipeDetail(recipe)
+        }
+        else if let indexPath =  favouriteCollectionView.indexPath(for: cell){
+            let recipe = model.recipes[indexPath.item]
+            showRecipeDetail(recipe)
+        }
+        
     }
 }
 

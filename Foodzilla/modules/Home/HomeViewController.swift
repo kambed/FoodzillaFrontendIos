@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol RecipeTableViewCellDelegate: AnyObject {
     func didTapRecipeCell(_ cell: RecipeTableViewCell)
@@ -16,11 +17,11 @@ final class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var paginationLabel: UILabel!
-
-    var model: HomeViewModel = HomeViewModel()
-
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var model: HomeViewModel!
+    var cancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,18 @@ final class HomeViewController: UIViewController, Storyboarded {
         
         Task {
             do {
-                let creds = try await ApolloGraphQLClient.shared.loginUser(user: User(username: "username123", password: "Password123!"))
-                ApolloGraphQLClient.shared.updateBearerToken(token: creds.login!.token)
                 try await model.fetchRecipes()
-                collectionView.reloadSections(IndexSet(integer: 0))
             } catch let err {
                 print(err)
             }
         }
+        
+        model.$recipes.sink { [weak self] _ in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                self.collectionView.reloadSections(IndexSet(integer: 0))
+            }
+        }.store(in: &cancellables)
     }
 
     override func loadView() {

@@ -12,7 +12,7 @@ class FavouritesCoordinator: Coordinator {
     static func prepare() -> FavouriteRecipesViewController {
         
         let vc = FavouriteRecipesViewController.instantiate()
-//        vc.model = UserPanelViewModel()
+        vc.model = FavouriteRecipesViewModel()
         return vc
     }
 }
