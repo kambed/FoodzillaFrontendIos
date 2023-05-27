@@ -16,9 +16,13 @@ class RegisterViewModel {
                     throw RegistrationError.passwordDontMatch
                 }
                 
+                let reg = try await ApolloGraphQLClient.shared.createUser(user: user)
                 let creds = try await ApolloGraphQLClient.shared.loginUser(user: user)
                 ApolloGraphQLClient.shared.refreshToken(token: creds.login?.token)
                 AlertManager.shared.showSuccess(message: "You have successfully created your account!")
+                DispatchQueue.main.async {
+                    UIApplication.shared.sceneDelegate?.changeRootViewController(viewController: ContainerCoordinator.prepare())
+                }
             } catch let err {
                 AlertManager.shared.showError(message: err.localizedDescription)
             }

@@ -141,8 +141,8 @@ class ApolloGraphQLClient {
     
     // MARK: Recipes
     
-    public func getRecommendations() async throws -> FoodzillaGraphQL.GetRecommendationsQuery.Data {
-        return try await performQuery(operation: FoodzillaGraphQL.GetRecommendationsQuery())
+    public func getRecommendations() async throws -> FoodzillaGraphQL.RecommendationsQuery.Data {
+        return try await performQuery(operation: FoodzillaGraphQL.RecommendationsQuery())
     }
 }
 

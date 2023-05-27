@@ -36,12 +36,12 @@ public extension FoodzillaGraphQL {
 
       /// RecentlyViewedRecipe
       ///
-      /// Parent Type: `RecipeSummarization`
+      /// Parent Type: `Recipe`
       public struct RecentlyViewedRecipe: FoodzillaGraphQL.SelectionSet {
         public let __data: DataDict
         public init(data: DataDict) { __data = data }
 
-        public static var __parentType: Apollo.ParentType { FoodzillaGraphQL.Objects.RecipeSummarization }
+        public static var __parentType: Apollo.ParentType { FoodzillaGraphQL.Objects.Recipe }
         public static var __selections: [Apollo.Selection] { [
           .field("id", FoodzillaGraphQL.ID?.self),
           .field("name", String.self),

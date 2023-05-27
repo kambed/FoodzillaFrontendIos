@@ -1,4 +1,9 @@
 extend type Query {
-    recommendations: [RecipeSummarization]!
+    recommendations: Recommendations!
+}
+
+type Recommendations {
+    opinion: String
+    recipes: [Recipe]!
 }
 

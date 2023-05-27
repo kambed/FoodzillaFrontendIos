@@ -4,8 +4,8 @@
 import Apollo
 
 public extension FoodzillaGraphQL.Objects {
-  static let RecipeSummarization = Object(
-    typename: "RecipeSummarization",
+  static let Recommendations = Object(
+    typename: "Recommendations",
     implementedInterfaces: []
   )
 }

@@ -32,7 +32,8 @@ public extension FoodzillaGraphQL {
     public static func objectType(forTypename typename: String) -> Object? {
       switch typename {
       case "Query": return FoodzillaGraphQL.Objects.Query
-      case "RecipeSummarization": return FoodzillaGraphQL.Objects.RecipeSummarization
+      case "Recommendations": return FoodzillaGraphQL.Objects.Recommendations
+      case "Recipe": return FoodzillaGraphQL.Objects.Recipe
       case "Ingredient": return FoodzillaGraphQL.Objects.Ingredient
       case "Mutation": return FoodzillaGraphQL.Objects.Mutation
       case "Token": return FoodzillaGraphQL.Objects.Token
@@ -41,7 +42,6 @@ public extension FoodzillaGraphQL {
       case "SavedSearchResult": return FoodzillaGraphQL.Objects.SavedSearchResult
       case "FilterTypeResult": return FoodzillaGraphQL.Objects.FilterTypeResult
       case "SavedSearchSortType": return FoodzillaGraphQL.Objects.SavedSearchSortType
-      case "Recipe": return FoodzillaGraphQL.Objects.Recipe
       case "Review": return FoodzillaGraphQL.Objects.Review
       case "SearchResult": return FoodzillaGraphQL.Objects.SearchResult
       default: return nil

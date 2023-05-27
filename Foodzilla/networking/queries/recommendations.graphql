@@ -1,0 +1,11 @@
+query recommendations {
+    recommendations {
+        opinion
+        recipes {
+            id
+            name
+            image
+            timeOfPreparation
+        }
+    }
+}

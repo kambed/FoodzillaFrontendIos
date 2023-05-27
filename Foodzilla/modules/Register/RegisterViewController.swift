@@ -10,11 +10,11 @@ import Combine
 
 final class RegisterViewController: UIViewController, Storyboarded {
 
-    @IBOutlet weak var EmailTextField: MainTextField!
-    @IBOutlet weak var FirstNameTextField: MainTextField!
-    @IBOutlet weak var LastNameTextField: MainTextField!
-    @IBOutlet weak var PasswordTextField: MainTextField!
-    @IBOutlet weak var ConfirmPassTextField: MainTextField!
+    @IBOutlet weak var usernameTextField: MainTextField!
+    @IBOutlet weak var firstNameTextField: MainTextField!
+    @IBOutlet weak var lastNameTextField: MainTextField!
+    @IBOutlet weak var passwordTextField: MainTextField!
+    @IBOutlet weak var confirmPassTextField: MainTextField!
     @IBOutlet weak var registerButton: LandingButton!
     
     var model: RegisterViewModel!
@@ -26,15 +26,15 @@ final class RegisterViewController: UIViewController, Storyboarded {
     override func loadView() {
         super.loadView()
         registerButton.title = "REGISTER"
-        EmailTextField.mainTextField.placeholder = "E-mail address"
-        FirstNameTextField.mainTextField.placeholder = "First name"
-        LastNameTextField.mainTextField.placeholder = "Last name"
-        PasswordTextField.mainTextField.placeholder = "Password"
-        ConfirmPassTextField.mainTextField.placeholder = "Confirm password"
+        usernameTextField.mainTextField.placeholder = "Username"
+        firstNameTextField.mainTextField.placeholder = "First name"
+        lastNameTextField.mainTextField.placeholder = "Last name"
+        passwordTextField.mainTextField.placeholder = "Password"
+        confirmPassTextField.mainTextField.placeholder = "Confirm password"
     }
     
     
     @IBAction func registerButtonTapped(_ sender: Any) {
-        model.register(user: User(firstName: FirstNameTextField.mainTextField.text!, lastName: LastNameTextField.mainTextField.text!, username: EmailTextField.mainTextField.text!, password: PasswordTextField.mainTextField.text!), confirmPassword: ConfirmPassTextField.mainTextField.text!)
+        model.register(user: User(firstName: firstNameTextField.mainTextField.text!, lastName: lastNameTextField.mainTextField.text!, username: usernameTextField.mainTextField.text!, password: passwordTextField.mainTextField.text!), confirmPassword: confirmPassTextField.mainTextField.text!)
     }
 }

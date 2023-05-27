@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Dwh-gc-2lz">
                                 <rect key="frame" x="15" y="221" width="363" height="362"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Olg-o9-Rgz" customClass="MainTextField" customModule="Foodzilla" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Olg-o9-Rgz" userLabel="Username Text Field" customClass="MainTextField" customModule="Foodzilla" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="55"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -101,12 +101,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ConfirmPassTextField" destination="dGe-Yl-4gs" id="OfQ-cs-ryZ"/>
-                        <outlet property="EmailTextField" destination="Olg-o9-Rgz" id="5dN-ti-mS8"/>
-                        <outlet property="FirstNameTextField" destination="sIL-wy-bGq" id="IVm-03-er3"/>
-                        <outlet property="LastNameTextField" destination="JmM-6O-Ewy" id="m0G-j4-gfe"/>
-                        <outlet property="PasswordTextField" destination="6ai-RV-Ebx" id="SQ4-6y-4MT"/>
+                        <outlet property="confirmPassTextField" destination="dGe-Yl-4gs" id="OfQ-cs-ryZ"/>
+                        <outlet property="firstNameTextField" destination="sIL-wy-bGq" id="IVm-03-er3"/>
+                        <outlet property="lastNameTextField" destination="JmM-6O-Ewy" id="m0G-j4-gfe"/>
+                        <outlet property="passwordTextField" destination="6ai-RV-Ebx" id="SQ4-6y-4MT"/>
                         <outlet property="registerButton" destination="dhd-5r-fUm" id="dcm-uf-tHW"/>
+                        <outlet property="usernameTextField" destination="Olg-o9-Rgz" id="5dN-ti-mS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

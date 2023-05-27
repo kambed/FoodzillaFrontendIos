@@ -44,4 +44,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         UIView.transition(with: window!, duration: 0.3, options: [.transitionCrossDissolve], animations: {}, completion: nil)
     }
+    
+    public func logout() {
+        navigationController = UINavigationController(rootViewController: MainViewController.instantiate())
+        window?.rootViewController = navigationController
+        
+        UIView.transition(with: window!, duration: 0.3, options: [.transitionCrossDissolve], animations: {}, completion: nil)
+    }
 }

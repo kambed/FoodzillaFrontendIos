@@ -16,7 +16,6 @@ public extension FoodzillaGraphQL {
             __typename
             currentPage
             numberOfPages
-            opinion
             recipes {
               __typename
               name
@@ -78,23 +77,21 @@ public extension FoodzillaGraphQL {
         public static var __selections: [Apollo.Selection] { [
           .field("currentPage", Int.self),
           .field("numberOfPages", Int.self),
-          .field("opinion", String?.self),
           .field("recipes", [Recipe?].self),
         ] }
 
         public var currentPage: Int { __data["currentPage"] }
         public var numberOfPages: Int { __data["numberOfPages"] }
-        public var opinion: String? { __data["opinion"] }
         public var recipes: [Recipe?] { __data["recipes"] }
 
         /// Search.Recipe
         ///
-        /// Parent Type: `RecipeSummarization`
+        /// Parent Type: `Recipe`
         public struct Recipe: FoodzillaGraphQL.SelectionSet {
           public let __data: DataDict
           public init(data: DataDict) { __data = data }
 
-          public static var __parentType: Apollo.ParentType { FoodzillaGraphQL.Objects.RecipeSummarization }
+          public static var __parentType: Apollo.ParentType { FoodzillaGraphQL.Objects.Recipe }
           public static var __selections: [Apollo.Selection] { [
             .field("name", String.self),
           ] }

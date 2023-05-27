@@ -9,10 +9,17 @@ import UIKit
 
 class LoginViewModel {
     
-    func login() {
+    func login(user: User) {
         Task {
-            let creds = try await ApolloGraphQLClient.shared.loginUser(user: User(username: "username123", password: "Password123!"))
-            ApolloGraphQLClient.shared.refreshToken(token: creds.login?.token)
+            do {
+                let creds = try await ApolloGraphQLClient.shared.loginUser(user: User(username: user.username, password: user.password))
+                ApolloGraphQLClient.shared.refreshToken(token: creds.login?.token)
+                DispatchQueue.main.async {
+                    UIApplication.shared.sceneDelegate?.changeRootViewController(viewController: ContainerCoordinator.prepare())
+                }
+            } catch let err {
+                AlertManager.shared.showError(message: err.localizedDescription)
+            }
         }
     }
 }

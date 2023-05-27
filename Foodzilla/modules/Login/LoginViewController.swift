@@ -9,9 +9,9 @@ import UIKit
 
 final class LoginViewController: UIViewController, Storyboarded {
 
-    @IBOutlet weak var EmailTextField: MainTextField!
-    @IBOutlet weak var PasswordTextField: MainTextField!
-    @IBOutlet weak var SignInButton: LandingButton!
+    @IBOutlet weak var usernameTextField: MainTextField!
+    @IBOutlet weak var passwordTextField: MainTextField!
+    @IBOutlet weak var signInButton: LandingButton!
     @IBOutlet var registerHereLabel: UILabel!
     
     var model: LoginViewModel!
@@ -26,9 +26,9 @@ final class LoginViewController: UIViewController, Storyboarded {
 
     override func loadView() {
         super.loadView()
-        SignInButton.title = "SIGN IN"
-        EmailTextField.mainTextField.placeholder = "E-mail address"
-        PasswordTextField.mainTextField.placeholder = "Password"
+        signInButton.title = "SIGN IN"
+        usernameTextField.mainTextField.placeholder = "Username"
+        passwordTextField.mainTextField.placeholder = "Password"
     }
     
     @objc
@@ -38,8 +38,7 @@ final class LoginViewController: UIViewController, Storyboarded {
     
     
     @IBAction func signInTapped(_ sender: Any) {
-        
-        UIApplication.shared.sceneDelegate?.changeRootViewController(viewController: ContainerCoordinator.prepare())
+        model.login(user: User(username: usernameTextField.mainTextField.text!, password: passwordTextField.mainTextField.text!))
         
     }
 }
