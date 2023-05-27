@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class RegisterViewController: UIViewController, Storyboarded {
 
@@ -30,5 +31,10 @@ final class RegisterViewController: UIViewController, Storyboarded {
         LastNameTextField.mainTextField.placeholder = "Last name"
         PasswordTextField.mainTextField.placeholder = "Password"
         ConfirmPassTextField.mainTextField.placeholder = "Confirm password"
+    }
+    
+    
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        model.register(user: User(firstName: FirstNameTextField.mainTextField.text!, lastName: LastNameTextField.mainTextField.text!, username: EmailTextField.mainTextField.text!, password: PasswordTextField.mainTextField.text!), confirmPassword: ConfirmPassTextField.mainTextField.text!)
     }
 }

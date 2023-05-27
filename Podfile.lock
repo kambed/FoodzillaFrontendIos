@@ -77,6 +77,9 @@ PODS:
   - MDFTextAccessibility (2.0.1)
   - SnapKit (5.6.0)
   - SwiftLint (0.50.3)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
 
 DEPENDENCIES:
   - Apollo
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - MaterialComponents/Chips
   - SnapKit
   - SwiftLint
+  - SwiftMessages
 
 SPEC REPOS:
   trunk:
@@ -96,6 +100,7 @@ SPEC REPOS:
     - MDFTextAccessibility
     - SnapKit
     - SwiftLint
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   Apollo: 4db36a7f08ded7a9f73a72eb90457d98dc4c68f9
@@ -106,7 +111,8 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
 
-PODFILE CHECKSUM: 81d7b9b2e9c8bb36abd7e9e77dcee8ceaa3f4027
+PODFILE CHECKSUM: 9abd8549beff99c5cecec99221da4a335372dfb4
 
 COCOAPODS: 1.12.0

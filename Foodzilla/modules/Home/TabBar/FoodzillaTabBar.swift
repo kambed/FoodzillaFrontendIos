@@ -75,22 +75,16 @@ class FoodzillaTabBar: UITabBarController {
     private func setupUI() {
         
         self.view.backgroundColor = .white
+        let customTabBar = TabBarBase()
+        self.setValue(customTabBar, forKey: "tabBar")
         
-        Task {
-            let creds = try await ApolloGraphQLClient.shared.loginUser(user: User(username: "username123", password: "Password123!"))
-            ApolloGraphQLClient.shared.updateBearerToken(token: creds.login!.token)
-            
-            let customTabBar = TabBarBase()
-            self.setValue(customTabBar, forKey: "tabBar")
-            
-            setViewControllers([homeVC, searchVC, favoritesVC, dashboardVC], animated: true)
-            modalPresentationStyle = .fullScreen
-            modalTransitionStyle = .crossDissolve
-            
-            tabBar.items?[0].title = "Home"
-            tabBar.items?[1].title = "Search"
-            tabBar.items?[2].title = "Favorites"
-            tabBar.items?[3].title = "Dashboard"
-        }
+        setViewControllers([homeVC, searchVC, favoritesVC, dashboardVC], animated: true)
+        modalPresentationStyle = .fullScreen
+        modalTransitionStyle = .crossDissolve
+        
+        tabBar.items?[0].title = "Home"
+        tabBar.items?[1].title = "Search"
+        tabBar.items?[2].title = "Favorites"
+        tabBar.items?[3].title = "Dashboard"
     }    
 }

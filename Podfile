@@ -3,6 +3,7 @@ platform :ios, '15.0'
 target 'Foodzilla' do
   use_frameworks!
   pod 'SwiftLint'
+  pod 'SwiftMessages'
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'Apollo'

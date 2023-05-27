@@ -8,13 +8,6 @@
 import UIKit
 import Apollo
 
-struct User: Codable {
-    var firstName: String?
-    var lastName: String?
-    var username: String?
-    var password: String?
-}
-
 let BASE_URL: StaticString = "http://localhost:8080/graphql"
 
 class TokenInterceptor: ApolloInterceptor {
@@ -58,7 +51,9 @@ class ApolloGraphQLClient {
     
     private init() { }
     
-    private var apolloClient: ApolloClient = ApolloClient(url: URL(string: "\(BASE_URL)")!)
+    private lazy var apolloClient: ApolloClient = {
+        return initWithBearerToken(token: KeychainManager.shared.read(service: KeychainData.token.0, account: KeychainData.token.1, type: Token.self)?.token)
+    }()
     
     static let shared: ApolloGraphQLClient = {
         return ApolloGraphQLClient()
@@ -100,17 +95,21 @@ class ApolloGraphQLClient {
     
     // MARK: Util methods
     
-    public func updateBearerToken(token: String) {
+    public func initWithBearerToken(token: String?) -> ApolloClient {
         let endpointURL = URL(string: "\(BASE_URL)")!
         let store = ApolloStore()
         let interceptorProvider = NetworkInterceptorsProvider(
-            interceptors: [TokenInterceptor(token: token)],
+            interceptors: [TokenInterceptor(token: token ?? "")],
             store: store
         )
         let networkTransport = RequestChainNetworkTransport(
             interceptorProvider: interceptorProvider, endpointURL: endpointURL
         )
-        apolloClient = ApolloClient(networkTransport: networkTransport, store: store)
+        return ApolloClient(networkTransport: networkTransport, store: store)
+    }
+    
+    public func refreshToken(token: String?) {
+        apolloClient = initWithBearerToken(token: token)
     }
     
     // MARK: User
